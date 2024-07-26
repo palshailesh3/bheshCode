@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 222px;
+            height: 222px;
+            border: 3px solid grey;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -111px 0px 0px -111px;
+            background-color: orange;
+           
+        }
+    </style>
+</head>
+<body>
+    <input type="number" oninput="koo(event.target.value)">
+    <div id="box">
+hhhhhhh
+    </div>
+
+<button onclick="move()">click</button>
+
+<p id="para"></p>
+
+
+
+
+
+    <script>
+  
+   let x=[1,[2,3],[4,5,[6,7,8]]];
+   let y=x.flat();
+   console.log(y[4],x[2][0]);
+
+
+//         let no;
+// function koo(n){
+//     console.log("hhhhhhhhhhhhhhaaaaaaaaaaaaaakkkkkkkkkkkaaaaaaa")
+//     no=n;
+// }
+
+
+// let elemt=document.getElementById('para');
+
+// async function compute(n){
+   
+//     let data=await prom;
+
+//     data.then((data)=>{
+//           elemt.innerHTML=data;
+//           console.log(data);
+//     })
+
+// }
+
+
+         let prom=new Promise((resolve,reeject)=>{
+             let add=0;
+        for(let i=1;i<=1234;i++){
+            add+=i;
+         }
+         resolve(add);
+            
+            // console.log("promise gets resolved")
+         })
+        let dt= prom.then((value)=>{console.log(value);
+            return(888888); 
+                });
+                console.log(dt)
+                dt.then((value)=>console.log(value))
+       
+
+//         console.log(prom)
+//         let status1=confirm("are you okay")
+//         console.log(typeof(status1))
+//         console.log(status1.toString())
+// let status=prompt('are you ok');
+// let box=document.getElementById('box');
+// box.innerHTML=status;
+// // console.log(status)
+
+
+//  let rot=0;
+//    function move(){
+//     rot+=6;
+//     document.getElementById("box").style.transform = `rotate(${rot}deg)`;
+//    }
+
+
+//       setInterval(move,1000)
+        
+    </script>
+</body>
+</html>

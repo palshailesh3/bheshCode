@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .color{
+            color: blueviolet;
+        }
+        h1{
+            color: brown;
+        }
+        .add{
+            width: 540px;height: 540px;border: 1px solid grey;background: url("mm.jpg");font-size: 90px;
+            color:blue;margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="color">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+    </div>
+
+
+    <button >ad component</button>
+
+    <script>
+           $(document).ready(()=>{
+            $("button").click(()=>{
+                let elm = document.createElement("div");
+                elm.innerHTML="hey how are you";
+                elm.classList.add("add");
+                document.body.append(elm);
+            })
+           })
+    </script>
+</body>
+</html>

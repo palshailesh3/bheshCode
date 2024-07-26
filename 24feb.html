@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p{
+            width: 350px;
+            height: 350px;
+            border: 1px solid grey;
+            background-color: blueviolet;
+            color: blanchedalmond;
+            text-align: center;
+           
+        }
+        p::after{
+            content: "";
+            display: block;
+            width: 120px;
+            height: 120px;
+            background-color: brown;
+           
+        }
+        p::selection{
+            color: orange;
+            background-color: blue;
+        }
+        span::selection{
+            color: olivedrab;
+            background-color: gold;
+        }
+        ::marker{
+            color: brown;
+            font-size: 30px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda corporis deserunt aspernatur molestiae doloribus sapiente maxime voluptatum incidunt ipsam quia in minus quam illo optio temporibus voluptate beatae, quo odio.</span>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa optio voluptates quo, dignissimos deserunt laudantium corrupti dolorum est debitis ipsa unde!</p>
+
+     <ul>
+        <li>hey</li>
+        <li>my</li>
+        <li>manj</li>
+     </ul>
+
+<img id="img">
+<form action="">
+    <input type="text" onchange="put()">
+
+</form>
+     <script type="module" >
+        let user="";
+        let pic;
+        async function put(){
+          user=this.value;
+          let data=await fetch(`https://api.github.com/users/${user}`)
+          pic=await data.json()
+    console.log(pic)
+    
+    let elm=document.getElementById('img')
+    elm.src=pic.avatar_url;
+        }
+         
+        
+
+     </script>
+</body>
+</html>

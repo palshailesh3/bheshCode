@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 340px;height: 340px;display: flex;align-items: center;justify-content: center;
+            border: 3px solid grey;margin: 12px auto;
+        }
+        .inner{
+            width: 240px;height: 240px;display: flex;align-items: center;justify-content: center;
+            border: 3px solid grey;
+        }
+    </style>
+</head>
+<body>
+   
+    <a href="http://127.0.0.1:5500/pic/30m.html" id="link">link</a>
+ 
+     <div class="main" id="main" >
+        <div class="inner" id="inner" >
+            <button class="butt" id="butt" >button</button>
+        </div>
+     </div>
+    <ul>
+        <li>mango</li>
+        <li>banana</li>
+        <li>orange</li>
+        <li>grapes</li>
+        <li>papaya</li>
+        <li>guava</li>
+    </ul>
+ 
+   
+    <script>
+        let elm=document.querySelectorAll("li");
+         console.log(elm);
+
+elm.forEach((elm)=>{
+    elm.addEventListener("click",(e)=>{ 
+        //e.target.style.color="red";
+            alert(`${e.target.innerText} selected`);
+        })
+});
+
+        // elm.addEventListener("click",(e)=>{
+        //     alert(`${e.target.innerText} selected`);
+        // })
+
+        let main=document.getElementById('main');
+        let inner=document.getElementById('inner');
+        let butt=document.getElementById('butt');
+
+        main.addEventListener("click",(e)=>{ console.log("main div clicked")},true);
+        inner.addEventListener("click",(e)=>{ console.log("inner div clicked")},false);
+        butt.addEventListener("click",(e)=>{ console.log("button clicked")},true);
+
+    //   function pul(e){  e.stopPropagation()
+    //     console.log("main div clicked");
+    //     //alert(e.target.innerHTML);
+    //   }
+    //    function ful(e){ e.stopPropagation()
+    //     console.log("inner div clicked");
+    //    }
+    //    function but(e){ e.stopPropagation()
+    //     console.log("button clicked")
+    //    }
+
+        // let elm=document.getElementById('link');
+        // elm.addEventListener("click",(e)=>{   e.preventDefault();
+        //    // alert(e.target.href);
+        //     window.location.href="https://stackoverflow.com/questions/46895855/jquery-how-to-enable-a-tag-after-preventdefault"
+        //    // elm.href= ""
+             
+        // })
+    </script>
+</body>
+</html>

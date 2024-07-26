@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        padding: 0px;
+        margin: 0px;
+      }
+      #chess{
+        display: flex;
+        width: 620px;
+        height: 620px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        border: 3px solid grey;
+        
+        margin:0% auto;
+      }
+      
+      .white{
+        background-color: white;
+        width: 74px;
+        height: 74px;
+       border: 1px solid grey;
+
+      }
+      .black{
+        background-color: black;
+        width: 74px;
+        height: 74px;
+        border: 1px solid grey;
+
+      }
+    </style>
+</head>
+<body>
+
+ <div id="chess" class="chess"></div>
+
+ 
+
+<script>
+
+
+
+//let check= `<div id=${boxm}>`
+   
+//  for(let i=1;i<=8;i++){
+
+//   for(let j=1;j<=8;j++){
+//     if(j%2==0)
+//      {check+=`<div class=${white}></div>`;}
+//      else{
+//       check+=`<div class=${black}></div>`;
+//      }
+
+let bbox=document.getElementById('chess');
+let box=document.createElement("div");
+
+for(let j=0;j<8;j++){
+for(let i=0;i<8;i++){
+ 
+if(j%2==0)
+ {
+  if(i%2==0)
+ { 
+   box.classList.add("black");
+   }
+ else{
+  box.classList.add("white");
+ }
+ }
+ else{
+  if(i%2==0)
+ { box.classList.add("white");}
+ else{
+  box.classList.add("black");
+ }
+ }
+//  if(i%7==0){ let elm=document.createElement("br")
+   
+// //   box.appendChild(eelm)
+
+//  }
+  bbox.appendChild(box);
+}
+}
+
+//   }
+  // check+="</br>"
+// }
+// check+='</div>';
+// document.write(check);
+</script>
+
+<!--     
+<script>
+
+//   function boo(fun){
+//     let p=550;
+//     fun(p);
+//   }
+ 
+//   //boo(koo);
+//   let faction=boo;
+//   faction(koo);
+
+//     function koo(n){
+//         console.log(2*n)
+//     }
+
+//  let m=n=o=10;
+//  let p=1;
+//  if(m==n==o)//this matters how this is going to be evaluated first m==n will be replaced as true value
+//  //then it will be compared as true==10
+//  {
+//     console.log("yess this is correct")
+//  }else{
+//    console.log("no this is not correct")
+//  }
+
+
+//      data();
+//     let a="1 2 3 4 5 6 7 8 9 0";
+//     console.log(a)
+
+//     // let obj={
+//     //     ab:45,
+//     //     ba:"reafagah"
+//     // };
+
+
+//     // console.log(obj);
+//     // console.log(JSON.stringify(obj));
+
+//     function data(){
+//         for(let i=1;i<=5;i++){
+//             for(j=1;j<=i;j++){
+//                 // if(i==4&&j==4)
+//                 // continue;
+//                document.write(i+" "+j);
+            
+//             }
+//           document.write("</br>")
+//         }
+//     }
+   
+//     let dat=new Promise((resolve,reject)=>{
+//         //resolve(5555);
+//         //reject("something serious happening............................!")
+//         setTimeout(()=>{
+//             resolve(19995)
+//         },3000)
+        
+//     })
+//     console.log(dat);
+
+//     async function poo(){
+//       await dat.then(data=>{
+//         console.log(data) 
+//     }).catch(error=>{
+//         console.log(error)
+//     })
+    
+
+// console.log("not me first")
+
+//     }
+//     poo();
+let check="<div>"
+
+for(let i=0;i<=7;i++){
+
+  for(j=0;j<=7;j++){
+    if(j%2==0){
+      check+="<div></div>"
+    }
+    else{
+      check+="<div></div>"
+    }
+  }
+  check+="</br>"
+}
+check+="</div>";
+document.write(check);
+let b;
+let a=null;
+console.log(typeof(a),typeof(b));
+if(b){
+  console.log("yess jahhajj")
+}
+</script> -->
+
+    
+</body>
+</html>

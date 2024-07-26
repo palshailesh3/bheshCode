@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    
+    div.fix{ text-align: center;
+        border: 3px solid grey;margin: 3px;
+    }
+    .img{
+        float: right;
+        width: 150px;
+    }
+    .fix::after{
+        content: "";
+        display: block;
+        background-color: blueviolet;
+        width: 120px;
+        height: 120px;
+       
+        clear: both;
+        display: table;
+    }
+    .img1{
+        width: 150px;position: absolute;
+    }
+    div.jix{ width: fit-content;
+        clear: both;
+        border: 3px solid grey;position: relative;
+    }
+    .jix::after{
+        content: "";
+       width: 120px;height: 120px;background-color: bisque;
+
+    }
+   </style>
+</head>
+<body>
+    <div class="fix">
+        <img class="img" src="pic\mm.jpg" alt="mm">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint facilis dolore sed!
+    </div>
+    <div class="jix">
+        <img src="pic\zara.jpg" class="img1" alt="za">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quas eos corporis.
+    </div>
+</body>
+</html>

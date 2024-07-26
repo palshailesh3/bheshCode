@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        #content{
+           width: 70%;
+           height: 70vh;overflow: auto;border: 3px solid grey;
+        }
+        @media screen and (min-width:780px) and (max-width:900px){
+             #content{
+                width: 25%;
+             }
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <input type="number" name="" id="">
+    <div id="content"></div>
+
+
+    <script type="module">
+        import elm from './7june.html';
+        document.getElementById("content").innerHTML=elm.innerHTML;
+        
+        if(undefined==null){
+    console.log("yes they equal")
+}
+    </script>
+</body>
+</html>

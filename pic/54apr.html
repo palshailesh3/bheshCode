@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+    <style>
+        #form #area{ resize: none;
+            background-color: rgb(22, 223, 223);
+        }
+    </style>
+
+</head>
+<body>
+    <form  id="form">
+        <input name="text" type="text"  id="name" placeholder="write your name ">
+        <input name="email" type="email" id="email" placeholder="email">
+        <textarea name="textarea" id="area" cols="30" rows="10" placeholder="write here"></textarea>
+        <input type="submit">
+    </form>
+
+
+    <script> 
+    $(document).ready(function(){ 
+        let form =document.getElementById("form");
+        form.addEventListener("submit",(e)=>{ e.preventDefault();
+            let data=$("#email").value;
+           console.log(`form data is ${data}`);
+        })
+       
+    })
+    
+       
+    </script>
+</body>
+</html>

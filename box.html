@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #chess{
+            width: 432px;
+            height: 432px;
+            border: 1px solid grey;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .child{
+            width: 50px;
+            height: 50px;
+            border: 2px solid green;
+        }
+        #chess :nth-child(even){
+            background-color: blue;
+        }
+        .div{
+            width: 450px;
+            height: 450px;
+            border: 3px solid grey;
+            margin: 12px auto;
+        }
+        .lx{
+            width: 120px;height: 120px;background-color: orange;border: 3px solid green;
+        }
+       .div .mx{
+            width: 90px;height: 90px;border: 3px solid gainsboro;background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div id="chess" style="display: none;">
+     
+     
+    </div>
+
+<div class="div">
+    <div class="lx">
+        <div class="mx"></div>
+    </div>
+    <div class="mx"></div>
+</div>
+
+  <script >
+   let chess=document.getElementById('chess')
+
+   for(let i=1;i<=64;i++){
+    let chld=document.createElement("div");
+    chld.classList.add("child");
+    chess.appendChild(chld);
+    if(i%8==0){
+        let br=document.createElement("br");
+        chess.appendChild(br)
+    }
+   }
+  </script>  
+</body>
+</html>

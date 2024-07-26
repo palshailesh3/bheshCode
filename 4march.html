@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #day{
+            font-size: 10vw;
+            color: forestgreen;
+            font-weight: 800;
+        }
+        #id{
+            font-size: 10vw;
+            color: rgb(212, 102, 12);
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <p id="para">0</p>    
+ <button onclick="poo()" style="z-index: -1;position: absolute;">incrmnt</button>
+<p id="day"></p>
+
+<p id="id"></p>
+
+
+
+    <script>
+
+        let days=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+        
+            //console.log(date.toLocaleTimeString())
+            let eld=document.getElementById('day');
+           let elm2=document.getElementById('id');
+            let mn=0;
+        setInterval(()=>{ let date=new Date();
+            eld.innerHTML=date.toLocaleTimeString();
+            elm2.innerText=date.toLocaleTimeString();
+            if(mn<6){                mn++;
+            }else{
+                mn=0;
+            }
+        },1000)
+       
+       // console.log(days[date.getDay()]);
+
+let elm=document.getElementById('para');
+let n=0;
+function poo(){
+    n+=1;
+  elm.innerHTML=n;
+}
+
+
+        let str="11";
+        let no=Number(str);
+        let big=parseInt(str,2)
+        console.log(no+12)
+        console.log(big)
+        console.log(+str+66)
+    </script>
+</body>
+</html>

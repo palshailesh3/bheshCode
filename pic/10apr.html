@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <select name="fruit" id="fruit" multiple size="2optins[]">
+            <option value="" hidden>choose</option>
+            <option value="aam">mango</option>
+            <option value="kela">banana</option>
+            <option value="santra">orange</option>
+        </select>
+        <input type="submit" value="submit">
+    </form>
+    
+    <script type="module">
+   
+   let fun=function typ(){
+      let data="i am okey"
+      return(function (){
+        console.log(data);
+      })
+   }
+   let act=fun();
+ console.log(act())
+        let elm=document.getElementById('form');
+        elm.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let data=document.getElementById('fruit');
+           let rt= data.options[data.selectedIndex].innerHTML;
+           console.log(rt);
+           location.href="";
+        })
+let promise=new Promise((resolve,reject)=>{
+    resolve(99);
+})
+        setTimeout(()=>{
+    console.log("i am second ");
+  })
+//  promise.then((data)=>{
+//     console.log(data);
+//  }).catch(error=>console.log(`error value is ${error}`))
+console.log(promise.state)
+let adata=await promise;
+ console.log(adata);
+
+// try{
+//     let adata=await promise;
+// console.log(adata);
+//  }catch(err){
+//  console.log(`error is ${err}`);
+//  }
+
+  console.log("i am first");
+  
+        let arr=[1,2,3,4,5,6,7,8,9];
+         let data=arr.filter((value)=>{
+            return value>3&&value<8;
+         })
+         console.log(data);
+    </script>
+</body>
+</html>

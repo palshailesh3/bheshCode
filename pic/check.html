@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="js/event.js"></script>
+    <script type="module" src="js/handle.js"></script>
+</head>
+<body>
+    <button id="butt">click</button>
+    
+    
+    
+    <script type="module">
+        import handles from './js/handle.js';
+ let elm=document.getElementById('butt');
+ elm.addEventListener("click",()=>{
+    handles();
+ })
+        
+        
+        
+ console.log("heyyyyyyyyyy");
+ let a=99,b=87,c=89,d=23;
+   let arr=[1,2,3,4,5,5,6];
+   let adata= [a,b,c,d,...arr];
+   console.log(adata);
+    
+   //console.log(e);
+
+        let obj={name:"shail",
+                  age:24,
+                  sal:24000
+        }
+        let {name,...data}=obj;
+
+        console.log(data);
+        let obb=obj;
+        obj.age=obj.age+21;
+        console.log(obj.age);
+        console.log(obb.age);
+    </script>
+</body>
+</html>

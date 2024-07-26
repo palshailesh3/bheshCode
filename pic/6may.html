@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            width: 550px;height: 300px;border: 3px solid grey;
+            position: absolute;  left:calc(50% - 275px);top: calc(50%-150px);
+           
+        }
+    </style>
+</head>
+<body>
+    
+ <form id="form">
+    <input type="file" name="select" >
+    <input type="submit" name="submit" id="submit" value="submit">
+ </form>
+
+<img id="img" src="" alt="">
+
+
+<div class="main"></div>
+
+
+
+    <script type="module">
+ 
+    document.getElementById("form").addEventListener("submit",handle);
+
+       function handle(event){
+         event.preventDefault();
+         let data = event.target.select.value;
+         document.getElementById("img").src=data;
+         console.log(data);
+       }
+       
+
+    //     let no=68;
+    //    const promise=new Promise((resolve,reject)=>{
+
+    //     setTimeout(()=>{
+    //         if(no===68){
+    //             resolve("promise resolved");
+    //         }
+    //         else{
+    //             reject("promise failed");
+    //         }
+    //     },2000)
+              
+    //    })
+
+    //    let message=await promise;
+    //    console.log(message)
+        //  async function check(){
+        //     return(99);
+        //  }
+        //  let ab=await check();
+        //  console.log(ab);
+        // check().then(data=>console.log(data));
+    </script>
+</body>
+</html>

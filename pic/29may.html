@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 120px;
+            height: 330px;
+        }
+        button>img{
+            width: 19px;
+            height: 19px;
+        }
+        button{
+            border: none;
+            outline: none;
+        }
+        .h1{
+            height: 30px;
+        }
+        #alert{ width: 450px;height: 150px;border: 3px solid grey;position: absolute;
+           left: 50%; border-radius: 20px; text-align: center;
+           
+        }
+        #mess{
+            height: 80%;
+        }
+        .cancle button{
+            float: right;margin-right: 20px;
+        }
+    </style>
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+</head>
+<body>
+    <div id="alert">
+        <div id="mess">
+            aaaaaaaaaaaaaa
+        </div>
+        <div class="cancle">
+          <button>ok</button>
+        </div>
+    </div>
+    <img src="logo_transparent.png" alt="img">
+
+ 
+
+   <div class="h1">
+    <h1 id="h1">sssssssssssss</h1>
+   </div>
+   <input type="text" id="email.id" >
+   <button type="button"><img src="logo_transparent.png" alt="image"></button>
+   
+
+   
+   <script type="module">
+    import sumbmit from './js/hand.js'
+   $(document).ready(function(){
+
+    $("button").click(()=>[
+        sumbmit()
+    ])
+   });
+  
+        
+
+        // let aab="shaileg.com"
+        // var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        
+        // let fesult=aab.match(validRegex);
+        // console.log(fesult)
+        // if(aab.match(validRegex)){
+        //     alert("valid email");
+        // }
+        // else{
+        //     alert("invalid email")
+        // }
+       
+       
+    </script>
+</body>
+</html>

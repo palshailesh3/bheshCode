@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    a{
+    text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+   </style>
+</head>
+<body>
+    <a href="">link</a>
+
+  <button onclick="ret()">incr_counter</button>
+    <script>
+     
+        let ret=(function closure(){ let counter=0;
+            return(function (){ counter+=1;
+                console.log(counter);
+            })
+        })();
+       
+        let x;
+        if(Math.random()>=1){
+             x=11;
+        }else{
+             x=22;
+        }
+        console.log(x);
+
+        //closure();
+
+
+        // let promise=new Promise((resolve,reject)=>{
+        //     setTimeout(()=>{
+        //         reject(99);
+        //     },3000)
+        // })
+
+        // async function cal(){
+        //     try{
+        //         let data=await promise;
+        //     console.log(data);
+        //     }catch(error){
+        //        console.log(`error is ${error}`);
+        //     }
+        // }
+        // cal();
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let a=99;
+        let state={
+            count:0
+        }
+        
+        let prevstate = state;
+
+        function change(){
+           state={count:state.count+1}
+        }
+        change();
+        console.log(state);
+        console.log(prevstate);
+        prevstate.count+=3;
+        console.log(prevstate);
+        console.log(state);
+    </script>
+</body>
+</html>

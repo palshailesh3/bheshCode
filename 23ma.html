@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            width: 450px;height: 450px;border: 3px solid grey;
+            display: flex;align-items: center;justify-content: center;margin: 12px auto;
+        }
+        #box{
+            width: 250px;height: 250px;border: 3px solid grey;
+            display: flex;align-items: center;justify-content: center;
+        }
+        #butt{
+            width: 56px;height: 30px;border: 3px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <div id="box">
+            <button id="butt">click</button>
+        </div>
+    </div>
+   <form action="" onsubmit="smt()">
+    <input type="text">
+    <input type="submit">
+   </form>
+    <script>
+        function smt(){
+            event.preventDefault();
+            console.log("form submitted")
+           
+        }
+       document.getElementById("div").addEventListener("click",(event)=>{
+        console.log("outer div clicked")});
+        document.getElementById("box").addEventListener("click",(event)=>{
+            console.log("div.box clicked")
+        });
+        document.getElementById("butt").addEventListener("click",(event)=>{
+            console.log("button clicked")
+        })
+
+    </script>
+</body>
+</html>

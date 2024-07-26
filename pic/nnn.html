@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+//    .log('Z'.charCodeAt(0))
+
+//    let str="1a2b3c5A";
+//    console.log(str.at(-7))
+//    str[3]="z";
+//    console.log(str[3]);
+
+//    let data=str.charCodeAt(1);
+//    console.log(data);
+
+
+//    let st=" ";
+//     let no=" " 
+//    for(let iconsole=0;i<8;i++){ console.log(str[i])
+//     if((str.charCodeAt(i)>=97&&str.charCodeAt(i)<=122)||(str.charCodeAt(i)>=65&&str.charCodeAt(i)<=90)){
+       
+//         st+=str[i];
+//     }
+//     else{
+//         no=no+str[i];
+//     }
+//    }
+   
+//    console.log(st,no);
+   
+   
+
+    // let a = 321;
+    // let d1=a%10
+    // console.log(d1)
+    // a=Math.floor(a/10);
+    
+    // let d2=a%10
+    // console.log(d2)
+    // a=Math.floor(a/10);
+   
+    // let d3=a%10
+    // console.log(d3)
+    // let no =d1*100+d2*10+d3*1
+
+    // console.log(no)
+
+let arr=[12,24,32,1];
+let test;
+let swap;
+let index;
+let hint;
+let n=4;
+for(let j=0;j<n;j++) 
+{    test=arr[j];
+for(let i=j+1;i<arr.length;i++){
+  
+    if(test<arr[i]){
+        test=arr[i];
+        index=i;
+        hint=true
+    }
+
+}
+
+if(hint)
+{
+swap=arr[index];
+arr[index]=arr[j];
+arr[j]=swap;
+hint=false;
+}
+}
+console.log(test);
+ 
+    </script>
+</body>
+</html>

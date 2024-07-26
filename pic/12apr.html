@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eligendi soluta quis quod! Soluta, dolores accusantium pariatur sunt tenetur culpa veritatis.</p>
+
+
+<script type="module">
+   
+   try{
+   let data=await fetch(`https://api.github.com/users/palshailesh3`);
+   let adata=data.json();
+       console.log(data);
+       console.log(adata);
+   }catch(error){
+    console.log(error);
+
+   }
+
+
+   const employees = [
+ { name: "David Carlson", age: 30 },
+ { name: "John Cena", age: 34 },
+ { name: "Mike Sheridan", age: 25 },
+ { name: "John Carte", age: 50 }
+];
+
+let user;
+
+for(let i = 0; i < employees.length; i++) {
+  if(employees[i].name.indexOf('John') > -1) {
+    user = employees[i];
+    break;
+  }
+}
+
+console.log(user); 
+
+
+    let name="name";
+    let obj={
+        name:"shail",
+        age:{
+            tat:{
+                mat:"rat",
+                hat:"pat"
+            },
+            sat:"mat"
+        },
+        salary:2400000
+            }
+
+            let abj=obj; 
+    //let nobj=JSON.parse(JSON.stringify(obj));
+    //delete obj.name;
+    console.log(abj);
+    console.log(obj);
+
+    // let ab={...obj,[name]:"gas"};
+
+    //    console.log(ab);
+    //    console.log(obj);
+</script>
+</body>
+</html>

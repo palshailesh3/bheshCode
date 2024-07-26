@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="import" href="check.html">
+    
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        :root{
+            --font-color:red;
+            --new-color:blue;
+        }
+    .main{
+        width: 50%;height: 60vh;border: 53px solid var(--font-color);
+        margin: 19vh auto;padding: 35px; box-sizing: border-box;color: var(--font-color) ;
+    }
+    .inner{
+        width: 60%;height: 60%;background-color: blueviolet;margin: 15% auto;
+        color: var(--font-color) !important;
+    }
+    img{
+        max-width: 750px;
+        min-width: 350px;
+    }
+    </style>
+</head>
+<body>
+    <input id="mail" type="email" required>
+    <button onclick="getmail()">mail</button>
+
+
+    <video src="https://www.youtube.com/embed/shorts/oYv3VzNXxik"></video>
+    <img src="shail.jpg" alt="shail" >
+    <video src=""></video>
+    <a href=""></a>
+    <div class="main">
+        <div class="inner" style="color: rgb(58, 226, 43);">
+           ddddddddddddddddddddddddddddddddddd
+        </div>
+    </div>
+
+
+<p id="demo"></p>
+
+   <script>
+    // let ab=prompt("hey how are you?")
+    // alert(ab);
+    // console.log("hhhhhhhhhhhhhhhhhhhhhhh")
+    // function getmail(){
+    //     let data=document.getElementById('mail').value;
+    //     console.log(data);
+    // }
+
+    let str="                 hey i am fine"
+    let str2="hey i am fine";
+    if(str===str2){
+        console.log("same string")
+    }
+    document.getElementById('demo').innerHTML=str;
+    console.log(str.trim())
+
+      let obj={
+                name:"shailesh",
+                age:24
+              }
+        console.log(obj);
+      let ob2=JSON.stringify(obj); 
+          ob2.name="shailvi";
+         console.log(ob2);  
+   </script>
+
+</body>
+</html>

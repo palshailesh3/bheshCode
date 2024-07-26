@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        demo{
+            user-select: none;
+        } 
+        ::marker{
+            color: red;
+        }
+        /* span{
+            display: inline-block;width: fit-content;height: 45px;border: 3px solid grey;
+        } */
+        #para{
+            width: 320px;height: 320px;border: 3px solid grey;
+        }
+        #pp{
+            cursor: pointer;
+        }
+        #demo::before{
+            content: "";display: inline-block;
+            width: 37px;height: 37px;border: 3px solid grey;background: red;
+        }
+        @media  screen and (max-width: 900px) and (min-width:600px) {
+            p{
+                background-color: blue;
+                color: white;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati doloribus dolorem fugit commodi, explicabo amet praesentium deserunt perferendis iusto blanditiis harum esse, tempora repudiandae ea. Aut iusto illum maxime quas porro. Necessitatibus, animi nulla sapiente officiis voluptatibus omnis. Et unde quis, doloremque quod tempore libero minima quasi tempora perferendis recusandae ab, id rerum nobis dolorum voluptatem voluptates, labore impedit iusto praesentium omnis nesciunt dolor delectus! Eius, eos? Quis praesentium obcaecati ut, nemo accusamus quam rerum sequi, porro excepturi, eum et quos deserunt earum consectetur quia labore cupiditate perspiciatis laborum nesciunt reiciendis aliquam aut consequuntur? Nam a odio facilis nihil? Quod atque nihil voluptatum voluptatibus vitae delectus ipsa nobis voluptatem provident libero repellendus esse, eaque numquam totam, incidunt molestias pariatur amet! Explicabo atque modi porro beatae aspernatur odit exercitationem aliquam deleniti accusantium, labore dolor voluptates facere minus quas aliquid eaque quae nobis provident ratione ullam fuga doloremque maiores. Odio recusandae quia perspiciatis, corporis dolorem, incidunt debitis ab distinctio numquam facere corrupti hic aspernatur alias laborum ipsum eaque soluta tenetur! Quis autem voluptatum veniam laboriosam dicta! Enim laboriosam ad nobis hic ex et eveniet voluptatibus provident quas, recusandae, ipsa a aperiam, ratione quod! Vero quae iure expedita voluptatibus necessitatibus dolore dolorum nihil enim quos modi, architecto nemo maxime veniam est nisi laboriosam illum praesentium a, libero voluptatum. Velit culpa dolorem id repudiandae labore aliquam vel natus dolor doloribus, et debitis quos accusamus, consequuntur ratione exercitationem autem aliquid dicta cupiditate itaque tempora officia odit distinctio. Impedit odit unde laborum ut amet animi reprehenderit eum totam rem autem veritatis id, ea quam quaerat eos quo cum nihil cupiditate molestiae vitae modi magni dignissimos? Distinctio, quo maxime quasi excepturi neque voluptates! Perspiciatis incidunt nam cumque expedita praesentium facilis? Accusantium nemo consectetur saepe illo quod veniam non! Excepturi dolor dicta tempora voluptate, saepe omnis doloribus harum est, minus sequi laudantium. Et, libero perspiciatis, eius nulla in culpa deserunt corporis omnis consequatur incidunt possimus, unde voluptates facere nobis nam at veniam! Fugit architecto repellendus rerum deleniti neque obcaecati hic quis officia ipsum, dolore atque debitis error, impedit possimus, ipsam voluptate nesciunt officiis!</p>
+    <!-- <ol>
+        <li>goat</li>
+        <li>bufallo</li>
+        <li>cow</li>
+    </ol>
+<ul>
+    <li>apple</li>
+    <li>banana</li>
+    <li>mango</li>
+</ul> -->
+    <p id="pp" onclick="this.innerText=Date()">find time</p>
+    <p id="para" onclick="poo(event)">Lorem ipsum dolor sit amet.</p>
+<h1><a href="https://yonetravel.oneviewitsolutions.com/Yone/">link</a></h1>
+
+      <span onclick=" this.innerText=Date()">time please</span>
+    <span class="para">hhhhhhhhhhhhhhhhhhhhhhh</span>
+    <p class="para">gggggggggggggggggggggggggggggg</p>
+    <div class="para">ffffffffffffffffffffffffffffff</div>
+
+   <h1>hey <br>
+    <span>what are you doing?</span>
+   </h1>
+
+ <button onclick="addelm()">addelm</button>
+<p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, voluptatibus debitis exercitationem laborum, iusto sed animi asperiores sequi voluptatum ipsum veniam.</p>
+    <button onclick="rem()">remove</button>
+    
+    
+    <script>
+        let par=document.getElementById('demo');
+        function rem(){
+            let elm=document.querySelector("p.para");
+            elm.remove();
+            pm.innerHTML=de.length;
+        }
+        let pm=document.getElementById('demo');
+  let cd=document.querySelectorAll(".para");
+  let de=document.getElementsByClassName("para");
+       function addelm(){
+        let elm=document.createElement("p");
+        elm.classList.add("para");
+        elm.innerText="jjjjjjjj"
+        document.body.before(elm,par);
+           pm.innerHTML=de.length;
+       }
+
+       let arr=Array.from(de);
+       arr.forEach(elm=>{
+        console.log(elm);
+       })
+  console.log(cd);
+  console.log(de);
+ 
+
+// de.array.forEach(element => {
+//     console.log(element);
+// });
+//         let b=9,c=10;
+//        let a=b==c?77:79;
+
+//        console.log(a);
+//         function poo(e){
+//             document.write(e.target.innerText);
+//         }
+
+//         function high(){
+//             let a=99;
+//             return(function (){
+//                 console.log(a);
+                
+//             })
+//         }
+//         let data=high();
+//         console.log(data);
+        
+//         let mdata=data();
+//         console.log(mdata)
+    </script>
+</body>
+</html>

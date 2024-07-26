@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        #div{
+            width: 555px;
+            height: 750px;
+            border: 3px solid grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 12px auto;
+        }
+        #div img{
+            width: 100%;
+            height: 100%;
+        }
+        .img{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 620px;
+            height: 120px;
+            margin: 12px auto;
+            box-sizing: border-box;
+        }
+        .img img{
+            width: 150px;
+            height: 120px;
+            margin: 3px;
+            cursor: zoom-in;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="" onsubmit="check()">
+        <input type="date">
+        <input type="text">
+        <input type="submit">
+    </form>
+     <div id="div">
+        <img src="pic\mm.jpg" alt="">
+     </div>
+
+    <div class="img" id="img">
+        <img src="pic\nn copy.jpg" alt="">
+        <img src="pic\mm.jpg" alt="">
+       
+        <img src="pic\shail.jpg" alt="">
+        <img src="pic\zara.jpg" alt="">
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+function check(){
+    alert("form submitted")
+}
+
+       $(document).ready(function(){
+        $(".img img").click(()=>{ let data=$(this).attr("src");
+            $("#div img").attr("src",data)
+        })
+       })
+  //let elm=document.querySelector(".img img");
+  //let img=document.querySelector("#div img")
+  //img.childNodes.addEventListener("click",(e)=>{elm.src=e.target.src})
+ // console.log(elm);
+//  elm.onclick((e)=>{
+//     img.src=e.target.src;
+//  })
+
+// console.log(elm)
+// elm.addEventListener("click",(e)=>{img.src=e.target.src})
+
+
+//         let elm=document.querySelector("#img img")
+//         let data=document.querySelector(".img img");
+// data.style.width="820px";
+
+// data.onclick(()=>{
+//     elm.src=data.src;
+// })
+        // data.addEventListener("click",()=>{
+        //    elm.src=data.src;
+        // })
+    </script>
+      
+</body>
+</html>

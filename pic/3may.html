@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para{
+            width: 75%;height: 45vh;border: 3px solid grey;margin: auto;
+            padding: 3px;box-sizing: border-box;display: flex;justify-content: space-between;
+        }
+        p{
+            width: 15%;height: 21vh;border: 3px solid grey;
+            margin: 3px;box-sizing: border-box;
+        }
+        img{width: 177px;}
+        .span{
+            display: flex;align-items: center;justify-content: center;width: 50%;
+        }
+        .img{
+            display: flex;align-items: center;justify-content: center;width: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</span>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</span>
+    <div class="para">
+     <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus.</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus.</p> -->
+     <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus.</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus.</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus.</p> -->
+     <div class="span"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque.</span></div>
+     <div class="img"><img src="zara.jpg" alt="zara"></div>
+    </div>
+
+
+    <script>
+        setTimeout(()=>console.log("it is set time out"))
+    let data=new Promise((resolve,reject)=>{
+                 console.log("it is a new promise object");
+                 setTimeout(()=>{
+                    reject(99);
+                 },3000);
+          
+        });
+       // data.then(data=>console.log(data));
+        data.catch(err=>console.log(err));
+        console.log(data);
+    </script>
+</body>
+</html>

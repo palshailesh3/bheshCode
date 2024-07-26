@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        mark{
+            background-color: blue;
+        }
+        p{width: 450px;height: 450px;background-color: aqua;}
+        p#para{
+            height: 120px;
+        }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <p> <i>jujuhuhhghh</i>
+        <em>iiiiiiiiiiiiiiiiiiiikhgjgjhgjfjjjyjyjy</em>
+        <mark>hhhhhhhhhhhhhh</mark>
+        Lorem ipsum dolor sit amet<sup>consectetur</sup>, adipisicing elit.
+         <ins>pppppppp</ins> ins quas hic <del>gggggggggggg</del>consectetur eos. 
+         Vel magnam autem ipsam obcaecati. Eligendi nobis nesciunt cupiditate modi at
+          dolorum officia itaque, aliquam ipsum aliquid autem accus <mark>antium vitae</mark>
+           distinctio. Quisquam, ipsum? Autem aliquid, quod dolore maxime illo distinctio et sint.
+    </p> 
+
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis placeat vero illum. Laborum, placeat quaerat. Facilis tempore nostrum aut recusandae incidunt.</p>
+    
+    <script>
+ $(document).ready(function(){
+    $("#para").click(()=>{
+        $(this).css({'height':"350px","width":"350px"})
+    })
+ })
+    </script>
+</body>
+</html>

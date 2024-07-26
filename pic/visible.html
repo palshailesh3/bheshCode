@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .div{
+            width: 190px;height: 0px;margin: 12px auto;
+           transition: background-color 2s,height 2s, border 2s;box-sizing: border-box;
+        }
+        .show{
+          background-color: blueviolet;height: 190px;border: 3px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <button>show div</button>
+    <div class="div"></div>
+
+
+
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(()=>{
+                $(".div").toggleClass("show")
+            })
+        })
+    </script>
+</body>
+</html>

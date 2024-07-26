@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .para1{
+            width: 100%;
+            height: 100%;
+            border: 1px solid grey;
+            background-color: bisque;
+            cursor: pointer;
+            transition: width 1s,height 1s;
+        }
+        .show{
+           
+            padding: 21px;
+        }
+        #box{
+            width: 540px;
+            height: 540px;
+            border: 9px solid rgba(160, 137, 148, 0.61);
+            border-radius: 50%;
+            box-sizing: border-box;
+            margin: 12px auto;
+            transition: padding .5s;
+            z-index: 1;
+        }
+        .jump{
+            width: 100%;
+            height: 100%;
+            background-color: peru;
+            border-radius: 50%;
+            margin: 1px auto;
+        }
+        input{
+            background-color: blueviolet;
+            width: 330px;
+            height: 30px;
+            margin: 30px;
+            outline: none;
+            border: none;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+      .main:focus{
+        background-color: aqua;
+      }
+      .bar{
+        width: 90%;
+        height: 7vh;
+        margin: 9px auto;
+        background-color: rgb(208, 229, 248);
+        box-sizing: border-box;
+        padding: 0px 12px;
+      }
+      ul{ height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+      }
+      li{
+        font-size: large;
+        font-weight: 600;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(241, 142, 96);
+        box-sizing: border-box;
+        padding: 3px 5px;
+        border-radius: 5px;
+      }
+      a{
+        text-decoration: none;
+        font-size: 100%;
+        color: rgb(255, 0, 0);
+      }
+ .slide{
+    width: 90%;
+    height: fit-content;
+    margin: 12px auto;
+    text-align: center;
+    position: relative;
+ }
+ .img{
+    position: absolute;
+    left: 100%;
+    top: 49%;
+
+ }
+    </style>
+</head>
+<body>
+
+<div class="slide">
+    <img id="slide" style="width: 90%;height: 50vh;" 
+    src="https://media.istockphoto.com/id/537988165/photo/varanasi.webp?b=1&s=170667a&w=0&k=20&c=vqr-PzTfIycbIpbzgWms1FRQ3o4fnYxcivhlR3HuLNs=" 
+     alt="kashi_vishwanath" >
+     
+        <img class="img" id="img" style="width: 30px;height: 21px;" 
+        
+      alt="nature_img" >
+    
+</div>
+
+    <!-- <p id="para" class="para">
+        Lorem ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus quos qui nostrum! dolor sit amet consectetur adipisicing elit. Asperiores quod non aliquam, alias ducimus a nam inventore nihil eveniet quae ratione!
+    </p> -->
+    <!-- <div id="div">
+        <p class="para1" id="para2">paragraph</p>
+    </div> -->
+
+    <!-- <input type="text" class="main">  -->
+
+    <!-- <div id="box">
+        <div class="jump"></div>  -->
+        <!-- <img class="img" style="width: 100%;height: 100%;" 
+        src="https://media.istockphoto.com/id/1148910293/vector/3d-realistic-vector-isolated-human-heart-anatomically-correct-heart-with-venous-system.jpg?s=612x612&w=0&k=20&c=5x5X8EM8BXOt7iVEw-jIzi7IxeMDFq9ynGPdo86rC2Y="
+         alt="" srcset=""> -->
+<!--          
+       <img class="img" style="width: 100%;height: 100%;" 
+       src="https://t3.ftcdn.net/jpg/00/19/89/58/360_F_19895879_uZ0tHguWowgKxb7jgUzuJk7IdXJCYZkI.jpg" 
+       alt="" srcset="">
+   
+    </div>
+
+  <button onmouseover="love()">hey</button> --> 
+
+
+
+<div class="bar">
+    <ul class="main_bar">
+        <li><a href="">reference
+            
+        </a>
+        <ul>
+            <li> name</li>
+            <li>age</li>
+            <li>sal</li>
+        </ul>
+            
+        </li>
+        <li>subject</li>
+        <li>history</li>
+        <li>contact</li>
+        <li>about</li>
+    </ul>
+</div>
+
+
+
+
+    <script>
+         tale();
+         ab=9;
+         console.log(ab);
+
+         var ab=12;
+        function tale(){
+                   var ab=122;
+                   console.log(ab);
+                 }
+
+
+
+
+let image=[ 
+            "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2020/07/Feature-image-Varanasi-Temples.jpg",
+            "https://images.news18.com/ibnlive/uploads/2022/01/kashi.png",
+            "https://media.istockphoto.com/id/537988165/photo/varanasi.webp?b=1&s=170667a&w=0&k=20&c=vqr-PzTfIycbIpbzgWms1FRQ3o4fnYxcivhlR3HuLNs=",     
+            "https://images.cnbctv18.com/wp-content/uploads/2022/08/Shimla-shutterstock-1019x573.jpg",
+           "https://st3.depositphotos.com/19844170/33118/i/450/depositphotos_331189246-stock-photo-beautiful-view-of-shimla-city.jpg",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/292138307.jpg?k=eb10c5a84dec52a944c9724bef9aa37b772fcb6205a75bffb838ebf734c9176f&o=&hp=1"
+          ]
+
+       let elm=document.getElementById('slide');
+       let tik=document.getElementById('img');
+        let n=0;
+        elm.src=image[n];
+       tik.onclick=()=>{
+        n++;
+          elm.src=image[n];
+          if(n==5){
+            n=0;
+          }
+          
+       }
+
+        let eld=document.getElementById('box');
+  function love(){
+         
+       
+  }
+
+//   setInterval(()=>{
+//             eld.classList.toggle("show");
+//         },500)
+let a=[1,2,3,4,"tyhe"];
+let b=a;
+let c=[11,22,33];
+b=[...a,...c];
+let [d,...k]=a;
+k[2]="yayayyaya";
+console.log(d);
+console.log(k);
+console.log(a);
+b[3]="qqqqqq";
+console.log(b);
+
+// let a={
+//     ab:7,
+//     ba:"yes"
+// }
+// let b=a;
+
+
+// console.log(b);
+// b["ab"]=90;
+// console.log(a);
+
+ 
+    </script> 
+
+<!-- 
+    <script>
+         let data=document.getElementById('para');
+        let btn=document.getElementById('para2');
+         let elm=document.getElementById('div');
+        setInterval(()=>{
+            elm.classList.toggle("show");
+        },500);
+       
+        btn.onclick=()=>{
+            console.log(data.innerHTML);
+            btn.style.width="880px";
+        }
+
+    </script> -->
+
+</body>
+</html>

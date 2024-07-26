@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            width: 450px;height: 450px;border: 3px solid grey;margin: 12px auto;display: flex;align-items: center;
+            justify-content: center;
+        }
+    </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script>
+   $(document).ready(function(){
+     $("button").click(function(){
+       $("p").css("background-color","red");
+     });
+     $("input").hover(function (){
+          $(this).css("background-color","red")
+     },
+     function (){
+        $(this).css("background-color","white")
+     }
+     );
+   });
+   </script>
+</head>
+<body onclick="budy()">
+
+    
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+    <div id="div" onclick="div(event)"> sssssssssssssssdddddddddddddjjjjjjj
+        <button onclick="button()">click_mwe</button>
+    </div>
+
+<input type="text" onfocus="fo(e)" onblur="bl()">
+
+    <script>
+       let elm=document.getElementById('div');
+       elm.addEventListener("click",(event)=>{
+           console.log(event.target.innerText)
+       })
+        
+        function budy(){
+            console.log("body clicked.");
+        }
+        function div(event){
+            let a=event;
+            console.log(a);
+        }
+        function button(){
+            console.log("button clicked")
+        }
+    </script>
+</body>
+</html>

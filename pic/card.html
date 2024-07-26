@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cart{
+            width: 350px;height: 450px;border: 0px solid grey;box-sizing: border-box;
+            padding: 10px 10px 15px 10px;transition: padding .2s;
+        }
+        .cart:hover{
+            padding: 7px 10px 18px 10px;
+        }
+        .main{
+            width: 100%;height: 100%;border-radius: 9px;overflow: hidden;position: relative;text-align: center;
+        }
+        img{
+            width: 100%;height: 100%;
+        }
+        p{
+            position: absolute;bottom: 5px;width: 100%;color: whitesmoke;
+        }
+        .main a{
+            position: absolute;width: 100%;
+            height: 100%;z-index: 55;
+        }
+        li::before{
+            content: " ";
+            display: block;
+            width: 320px;height: 210px;border: 3px solid grey;
+        }
+        span{
+            background-color: rgba(100, 6, 189, 0.842);color: whitesmoke;
+            width: 230px;height: 230px;overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="cart">
+        <div class="main">
+            <a href="https://www.w3schools.com/jsref/jsref_valueof_string.asp"></a>
+            <img src="mm.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet.aaaaaaaaaaaaaaaa</p>
+        </div>
+    </div> -->
+    <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non ratione aut iusto?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Accusantium, eum. Minus maxime velit quia consequatur quasi quas quam 
+         illum. Debitis autem voluptas beatae.</span>
+
+<div id="demo"></div>
+<ul>
+    <li>kkkkkkkkkk</li>
+</ul>
+    <script>
+         let arr=[1,2,3,4,5,6];
+        //  map method
+         let newarr = arr.map((elm)=>{
+            return(2*elm)
+         });
+         console.log(newarr);
+
+        //  filter method
+           let farr=arr.filter((elm)=>{
+            return(elm%2==0)
+           })
+           console.log(farr);
+
+        //    reduce method
+
+        // let sum=0;
+        let rarr=arr.reduce((sum,elm)=>{
+
+            sum=sum+elm;
+            return(sum);
+        },0 )
+        console.log(rarr);
+        //  arr[3]=7;
+        //  console.log(arr);
+
+
+
+        // let str="applelrsmnr";
+        // let myarr=str.split("");
+        // let mlen=myarr.len
+        // myarr[5]="z";
+        // let text=myarr.join("");
+        // console.log(typeof(myarr),myarr,text,str)
+        // let nstr=str.replaceAll("p","k");
+        // console.log(str,nstr);
+        //   let value,rlen=Math.floor(str.length/2) ,alen=str.length;
+        //   let str1="",str2="";
+        //   console.log(typeof(str[2]))
+        //   console.log(alen)
+        // for(let i=0;i<rlen;i++){
+        //      console.log(str[i]+str[alen-i-1])
+        //     value=str[i];
+        //     str1+=str[i];
+        //     str2+=str[alen-i-1];
+            // setCharAt(str,i,str[len-i]);
+            // setCharAt(str,len-i,value);
+            // str.setCharAt(i,str[len-i]);
+            // str.setCharAt(len-i,value)
+            //str=str.replace(str[len-i],value);
+        // }
+        // console.log(str,str1,str2)
+
+        // if(alen%2==0){
+        //     console.log(str2+str1);
+        // }
+        // else{
+        //     console.log(str2+str[rlen]+str1);
+        // }
+        //console.log(str);
+        // let data="";
+        // let stra=str.split(",");
+        // stra.map((elm)=>{
+        //       data=data + "  " + elm;
+        // })
+        // console.log(stra[2],data);
+
+       // let str="1gA8Ja3 najen \n a ajhuskq kjhhcc4\nsgs5";
+        // if(str.includes("en \n a")){
+        //     console.log("yessssssssssssssssss")
+        // }
+        // str=`hheydwe wwdwed  
+        //    dwwd wd vsgs
+        //    sqws
+           
+        //    sqs  qs`
+        // str[3]=9;
+        // console.log(str)
+
+
+
+//         let num=true;
+//    document.getElementById('demo').innerHTML=num.toString();
+        
+//         let no="",char="";
+//        let strleng=str.length;
+//        for(let i=0;i<strleng;i++){
+//         if((str.charCodeAt(i)>=97&&str.charCodeAt(i)<=122)||(str.charCodeAt(i)>=65&&str.charCodeAt(i)<=90)){
+//             char+=str[i];
+//         }
+//         else{
+//             no+=str[i];
+//         }
+//        }
+//       console.log(char,no)
+    </script>
+
+
+</body>
+</html>

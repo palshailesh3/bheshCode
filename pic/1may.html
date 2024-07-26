@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #div{ display: flex;align-items: center;justify-content: center;
+            width: 75%;height: 450px;padding: 80px;box-sizing: border-box;
+            border: 3px solid grey;background-image: url(mm.jpg);background-size: cover;
+            background-position: center;line-height: 32px;position: absolute;top: 12px;
+            
+        }
+        .main{
+            width: 75%;height: 221px;display: flex;align-items: center;justify-content: center;
+            background: url(zara.jpg);background-position: center;
+        } */
+   
+   .header{
+    width: 100%;height: 11vh;background-color: aqua;margin-bottom: 51px;
+   }
+   .inner{
+    width: 35%;height: 45vh;
+   }
+   .class{
+    width: 100%;height: 7vh;background-color: blue;margin: 7px auto;
+   }
+   .float{
+    width: 25%;height: 30vh;background-color: blueviolet;float: right;
+   }
+   .footer{
+    width: 100%;height: 11vh;background-color: chartreuse;margin: 21px auto;
+   }
+   @media screen and (max-width:650px) {
+    .float{
+        float: none;
+        width: 100%;
+        margin: 30px auto;
+    }
+    .inner{
+        width: 100%;margin: 12px auto;
+    }
+   }
+   #para{
+    font-size: 57px;margin: 30px ;text-align: center;font-weight: 999;color: darkgreen;
+   }
+   </style>
+</head>
+<body>
+    <!-- <div class="main">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum dicta, cupiditate eaque reprehenderit a perferendis doloremque fugit consectetur unde ipsa odit animi error hic perspiciatis quam sapiente facere tempora voluptatibus sequi sint? Dolores facilis labore corrupti cumque, laudantium at maxime repellat ducimus ipsam exercitationem nisi!</div>
+    <div id="div">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ut voluptates? Totam repudiandae, dolorum, ratione cum ea sed blanditiis amet eveniet libero quam architecto perferendis corporis voluptatibus inventore nisi. Itaque labore sunt nisi ipsam architecto.
+    </div> -->
+    <div class="header"></div>
+    <div class="float"></div>
+    <div class="inner">
+        <div class="class"></div>
+        <div class="class"></div>
+        <div class="class"></div>
+        <div class="class"></div>
+        <div class="class"></div>
+    </div>
+    <div class="footer"></div>
+
+<p id="para"></p>
+<p id="main"></p>
+
+ <button id="butt">click-me</button>
+    <script>
+        function cout(){
+            console.log(99999)
+        }
+        let elm3=document.getElementById('butt');
+        elm3.onclick=cout;
+        let ab=99;
+        let elm2=document.getElementById('main');
+        //console.log(elm.innerHTML);
+        setInterval(()=>{
+          ab+=1;
+          elm2.innerHTML=ab;
+          elm.innerHTML=ab;
+        },1000)
+        // let elm=document.getElementById('div');
+        // elm.style.padding="121px"
+        let elm=document.getElementById('para');
+        
+    </script>
+</body>
+</html>

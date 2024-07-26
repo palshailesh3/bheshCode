@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            
+        }
+        table{ width: 100%;
+            margin: 45px 0px 0px 45px;
+        }
+        td,th{ text-align: center;
+            font-size: 35px;
+        }
+        
+       
+    </style>
+</head>
+<body>
+
+    <button onclick="starttimer()">start</button>
+    <button onclick="stoptimer()">stop</button>
+    <p id="demo"></p>
+ 
+
+    <table border="1">
+        <thead>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        </thead>
+        <tr>
+        <td rowspan="2">4</td>
+        <td>5</td>
+        <td>5</td>
+        </tr>
+        <tr>
+       
+        <td>7</td>
+        <td>8</td>
+        </tr>
+        <tr>
+        <td>9</td>
+        <td colspan="2">0</td>
+        
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>4</td>
+        <td>5</td>
+        </tr>
+    </table>
+    
+        
+
+        <script>
+            const txt = '{"name":"John", "age":30, "city":"New York"}'
+
+            console.log(txt);
+              const obj = JSON.parse(txt);
+              console.log(obj)
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+        </script>
+    <!-- <script>
+        
+
+const flags = [{
+"id": 1,
+"country": "India",
+"region": "asia"
+},
+{
+"id": 2,
+"country": "Australia",
+"region": "australia"
+},
+{
+"id": 3,
+"country": "Portugal",
+"region": "Europe"
+},
+{
+"id": 4,
+"country": "Nepal",
+"region": "asia"
+},
+{
+"id": 5,
+"country": "Spain",
+"region": "Europe"
+},
+{
+"id": 6,
+"country": "Argentina",
+"region": "SouthAmerica"
+},
+{
+"id": 7,
+"country": "Bangladesh",
+"region": "asia"
+},
+{
+"id": 8,
+"country": "Chile",
+"region": "South America"
+},
+
+]
+console.log(flags[1].region)
+    </script>
+    <script>
+    "use strict"
+   
+  
+    let time=0;
+      let timer;
+        
+     function starttimer(){ 
+        timer = setInterval(()=>{
+          time+=1;
+          console.log(time);
+          if(time==10){
+           clearTimeout(timer)
+        }
+        },1000)
+        console.log("yes");
+     }
+
+     function stoptimer(){
+          clearTimeout(timer);
+     }
+    </script> -->
+</body>
+</html>

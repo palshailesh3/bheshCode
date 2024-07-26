@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+   
+   </style>
+</head>
+<body>
+<ul type="a">
+    <li>ab</li>
+    <li>bd</li>
+    <li>js</li>
+    <li>ka</li>
+</ul>
+<ol type="i">
+    <li>kkkk</li>
+    <li>llll</li>
+    <li>mmmm</li>
+    <li>nnnn</li>
+    <li>oooo</li>
+    <li>pppp</li>
+</ol>
+<!--       
+    <p id="main" class=" hr clr">Lorem ipsum dolor sit amet.</p>
+  <button onclick="play()">dhdhd</button>
+
+   <button onclick="call(99)">fun call</button><br>
+   <a href="https://newsapi.org/" onclick="return handleclick()">news gallery</a> -->
+
+   <button onclick="fun()">start timer</button>
+   <button onclick="fun2()">timer</button>
+
+    <p onclick="handle(event)">Lorem ipsum dolor sit amet.</p>
+
+<button onclick="gun()">click</button>
+
+
+<form action="">
+    <input type="text" value="name" name="name" >
+   <input type="submit"  value="submit">
+</form>
+
+<button onclick="handlesort(event)">price</button>
+<button onclick="handlesort(event)">name</button>
+<p id="demo"></p>
+
+<button onclick="sortme()">sort</button>
+
+
+
+<script>
+
+    setTimeout(()=>console.log("timeout"));
+    new Promise((res,rej)=>{
+        res("promise1")
+    }).then((data)=>console.log(data));
+    console.log("middle")
+    new Promise((res,rej)=>{
+        rej("promise2")
+    }).catch((data)=>console.log(data));
+
+</script>
+<!-- 
+<script type="module">
+    //setInterval(()=>console.log("llllllllllllllllllllllllll"),3000)
+   // console.log(promise);
+let data;
+  const promise = new Promise((res,rej)=>{
+                              console.log("promise execution start");
+
+                            //   async function trat(){
+                            //       const value = new Promise((res,rej)=>{ console.log("promise2");
+                            //       setTimeout(()=>{res(8888)},5000)
+                            //   })
+                            //   const nvalue = await value;
+                            //   console.log(nvalue)
+                            //   }
+
+                            //   trat();
+
+                             setTimeout(()=>{
+                                console.log("promise resolved");
+                                res(99)
+                             },12000);
+                          })
+                         // console.log(data);
+          data = await promise;//here we are waiting for promises to settle it down;
+         console.log(9999);
+          console.log(data);
+</script> -->
+<!-- 
+<script>
+    function sortme(){
+        console.log(arr.sort((a,b)=>{  
+            if(a.name<b.name) return -1;
+           }));
+    }
+</script> -->
+<!-- 
+<script>
+    
+const arr = [
+  {name:"ran",price:100 },
+  {name:"ram",price:100 },
+  {name:"shyam",price:100 },
+  {name:"puja",price:100 },
+  {name:"agarbatti",price:100 },
+  {name:"dhup",price:110 },
+  {name:"namk",price:110 },
+  {name:"gir",price:110 },
+  {name:"mahek",price:110 },
+  {name:"purab",price:120 },
+  {name:"paschim",price:120 },
+  {name:"uttar",price:120 },
+  {name:"dakshin",price:120 },
+  {name:"ghar",price:130 },
+  {name:"dwar",price:130 },
+  {name:"bhai",price:130 },
+  {name:"bahan",price:130 },
+  {name:"maa",price:140 },
+  {name:"baap",price:140 },
+  {name:"didi",price:140 },
+  {name:"bhaiya",price:140 }
+];
+
+function handlesort({target:{innerText}}){ 
+            
+            let text="";
+           arr.sort((a,b)=>{
+            if(a[innerText]>b[innerText]) return 1;
+            if(a[innerText]<b[innerText]) return -1;
+            return 0;
+           }).forEach(elm=>text+=elm.name+"  "+" " + elm.price+"<br/>")
+           console.log(arr);
+          document.getElementById('demo').innerHTML=text; 
+}
+</script> -->
+
+<!-- 
+<script>
+  let arr=[2,3,4,1,5,76,222,56,23];
+     
+    console.log(arr.sort(function(a,b){return(a-b)}));
+
+    function handle({target:{innerText}}){
+        console.log(innerText);
+
+    }
+    function gun(){
+        setInterval(()=>console.log("yes"),1000)
+    }
+</script> -->
+
+<!-- 
+   <script>
+    function throttle(fun){
+        let timer = null;
+        let count = 0;
+        return (()=>{
+            if(!timer){ 
+                count++;
+                fun();
+                console.log("start throttling");
+                timer=setTimeout(()=>{
+                console.log("start")
+                timer=null;
+                count=0;
+                },8000)
+            }else if(count<2){ count++;
+                fun();
+            }
+        })
+    }
+    const fun = throttle(fun2);
+
+    function fun2(){
+        console.log("fun2");
+    }
+   </script>
+    -->
+<!-- 
+   
+<script>
+    let timer = null;
+    function fun(){ console.log(timer);
+        timer=setTimeout(()=>{
+            console.log(timer);
+            clearTimeout(timer);
+        },10000);
+    }
+    function fun2(){
+        console.log(timer);
+    }
+   </script>
+    -->
+<!--    
+   <script>
+   console.log(eval('4+5*6/2'));
+    function handleclick(){
+            alert("navigation start");
+           // location.href="https://newsapi.org/";
+            return false;
+    }
+   </script> -->
+<!-- 
+   <script>
+
+    let arr = [1,2,3,4,5,6,7,8,9];
+    delete arr[0];
+    //let ab = arr.slice(0,4);
+    console.log(arr[0]);
+    
+   </script> -->
+<!-- 
+   <script>
+    let a={name:"hail"};
+    function fun(argu){
+        argu.name="mail";
+            if(argu=={name:"shail"}){
+                console.log("yesssssss");
+            }else{console.log(argu);
+                console.log(a);
+            }
+    }
+    fun(a);
+   </script> -->
+<!--    
+  <script>
+    const data="file";
+    console.log(call);
+      call(101);
+  var call =(elm)=>{
+        const data=elm;
+        console.log(arguments[0])
+        console.log(data);
+  }
+  call(77);
+  call(55);
+  call(11);
+  </script> -->
+
+<!-- 
+  <script>
+    console.log(name);
+   // name="mam";
+    //let name;
+
+    console.log(fun);
+    console.log(fun());
+
+    function fun(){
+        console.log("mmmmmm");
+        return 22;
+    }
+
+    console.log(afun);
+    //console.log(afun());
+    var afun = ()=>{
+        console.log("lllllllll");
+        return 77;
+    }
+
+    console.log(afun());
+  </script> -->
+<!-- 
+   <script>
+    let narr=[0,0,0,1,0]
+    function casb(arr) {
+
+// code here
+let left =[];
+let right = [];
+let len =arr.length;
+for(let i=0;i<len;i++){
+    if(arr[i]==0)
+    {
+        left.push(0)
+    }
+    else if(arr[i]==1)
+    {
+        right.push(1)
+        
+    }
+}
+console.log(left)
+return([...left,...right])
+}
+let data=casb(narr);
+console.log(data);
+   </script> -->
+
+<!--    
+    <script>
+  function play(){
+    document.getElementById("main").classList.toggle("clr")
+  }
+       
+    </script> -->
+<!-- 
+
+    <script>
+    //     Rotate the given array at a given index without using  in-built function
+	// const input1 = [1,2,3,4,5,6]	
+          
+    //     const output1 = [4,5,6,1,2,3]
+
+    const index =8;
+ 
+    const input1 = [1,2,3,4,5,6,33,44,6,222,35,67,9];
+    
+    let len = input1.length;
+    let output =[];
+    
+    for(let i=index;i<len;i++){  output.push(input1[i])}
+        
+    for(let i=0;i<index;i++){output.push(input1[i])}
+
+
+    console.log(input1);
+    console.log(output);
+   
+
+
+    </script> -->
+
+    
+    <!-- <script>
+        function name(){ let sum=0;
+            console.log("name");
+            
+            setTimeout(()=>{console.log("settimeout")});
+            
+        const promise = new Promise((res,rej)=>{
+            console.log("promise");
+            rej("rejected promise");
+            res("resolved promise");         
+        });
+
+        promise.then((val)=>{console.log(val);console.log("main")})
+               .catch((err)=>console.log(err));
+
+               for(let i=0;i<1111111111;i++){
+                sum+=i;
+            }
+            console.log(sum);
+        }
+        
+        name();
+    </script> -->
+
+<!-- 
+     <script>
+        let ba = null;
+        if(ba<0){
+            console.log("null");
+        }
+        console.log(typeof(ba));
+        arr = [1,2,3,7,5], n = 5, s = 12;
+       function subarraySum(arr, n, s) {
+        let sum = 0,j = 0;
+        for(let i=0;i<n;i++){
+            
+              sum+=arr[i];
+              
+            if(sum==s){
+                console.log([j+1,i+1]);
+            }
+            if(sum>s){
+                   while(sum>s){
+                        sum=sum-arr[j]
+                          j++
+                      }
+                if(sum==s){ console.log([j+1,i+1])}
+            }
+        }
+        console.log(-1);
+    }
+    subarraySum(arr,n,s);
+     </script> -->
+</body>
+</html>

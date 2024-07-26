@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            --main-bg:rgb(82, 90, 100);
+            --hd-font-col:rgb(255, 251, 251);
+            --txt-col:rgb(126, 121, 121);
+            --hlt-col:rgb(39, 224, 194);
+            --emp-col:rgb(34, 33, 33);
+        }
+        .dis_cen{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .border_inv{
+            border: 0px solid rgb(252, 249, 249);
+            box-sizing: border-box;
+        }
+        .main_cont{
+           width: 100%;
+           height: 96vh;
+           background-color: var(--hd-font-col);
+           margin: 2vh auto;
+        }
+        .emp_cont{
+            width: 70%;
+            height: 100%;
+            background-color: var(--main-bg);
+            padding:2% 10% ;
+            border-radius: 9px;
+        }
+        .act_emp{
+            width: 100%;
+            height: 100%;
+            padding: 7px;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* first section */
+        .emp_det{
+            width: 100%;
+            height: 42%;
+            background-color: var(--emp-col);
+            border-radius: 9px;
+            padding: 9px;
+            display: flex;align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .emp_hd{ 
+            width: 100%;
+            height: 25%;
+            
+            box-sizing: border-box;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .emp_info{
+            width: 100%;
+            height: 40%;
+           
+            display: flex;
+        }
+        .emp_punt{
+            width: 100%;
+            height: 25%;
+           border: 0px;
+        }
+        .del_lef{
+            border-radius: 3px;
+            padding-left: 10px;
+            color: var(--hd-font-col);
+        }
+        .del_lef hr{
+            width: 6px;
+            height: 20px;
+            background-color: var(--hlt-col);
+            border: 0px;
+            border-radius: 5px;
+            margin-right: 12px;
+        }
+        .del_rig select{
+            border: none;
+            outline: none;
+            background-color: var(--txt-col);
+            color: var(--hd-font-col);
+        }
+        
+        .del_rig{ 
+           
+            color: var(--hd-font-col);
+        }
+        .del_rig .download{
+           margin-left: 10px;
+            width: 100px;
+            height: 25px;
+            background-color: var(--hlt-col);
+            border: opx ;
+            box-sizing: border-box;
+            border-radius: 10px;
+            padding: 3px;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+        .del_rig .download span{
+            margin-left: 12px;
+            font-size: 12px;
+        }
+       
+        .emp_info .img{
+            width: 14%;
+            height: 100%;
+        }
+        .emp_info .img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .emp_info .img_info{
+            width: 85%;
+            height: 100%;
+            padding: 3px 15px;
+            color: var(--hd-font-col);
+        }
+        .about{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .role{
+            margin: 12px 0px 0px 18px;
+        }
+        .role span{
+            color: var(--txt-col);
+            font-size: 10px;
+        }
+        .role p{
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .emp_punt{
+            display: flex;
+            align-items: center;
+            color: var(--hd-font-col);
+        }
+        .emp_punt .punc{ width: 23%;
+            display: flex;
+            align-items: center;
+            padding: 12px;
+           background-color: rgb(94, 81, 81);
+           margin: 5px;
+           box-sizing: border-box;
+           border-radius: 15px;
+           height: 100%;
+        }
+        .punc img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            background-color: var(--txt-col);
+            border-radius: 50%;
+        }
+        .score{
+            margin-left: 15px;
+           
+        }
+        .score p{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .score span{
+            font-size: 12px;
+            color: var(--txt-col);
+        }
+        /* second section */
+        .emp_his{
+            width: 100%;
+            height: 53%;
+            background-color: var(--emp-col);
+            border-radius: 15px;
+            box-sizing: border-box;
+        }
+        .del_rig .lft span{
+              width: 21px;
+              height: 21px;
+              border: 1px solid gray;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 3px;
+              margin: 0px 5px;
+        }
+        .del_rig .lft {
+            margin-right: 15px;
+        }
+        .rgt span{
+            height: 21px;
+              border: 1px solid gray;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 3px;
+              margin: 0px 5px;
+        }
+        .rgt span i{
+            margin-right:12px;
+        }
+        .main_his{
+            width: 100%;height:fit-content;
+            padding: 12px;
+            display: flex;
+            align-content: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            color: var(--hd-font-col);
+            box-sizing: border-box;
+        }
+        .hinfo{
+            width: 30%;
+            height: 70px;
+            background-color: rgb(117, 99, 99);
+            padding: 9px;
+            border: 0px;
+            box-sizing: border-box;
+            border-radius: 9px;
+            margin-bottom: 15px;
+        }
+        .head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .head span{
+            font-size: 12px;
+        }
+        .head .rgt{
+            display: flex;
+            border: 1px solid grey;
+            padding: 2px 3px;
+            color: aqua;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        .inhead {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .inhead div span{
+            font-size: 10px;
+            color: rgb(77, 74, 74);
+        }
+        .pages{ 
+            width: 100%;
+            height: 12%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           padding: 12px;
+           box-sizing: border-box;
+        }
+        .pages span{ 
+            width: 12px;
+            height: 12px;
+            border: 1px solid rgb(99, 96, 96);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px;
+            color: var(--hd-font-col);
+            font-size: 12px;
+            padding: 3px;
+        }
+    </style>
+
+    <style>
+        p{  width: 450px; }
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="main_cont border_inv dis_cen">
+        <div class="emp_cont border_inv dis_cen">
+            <div class="act_emp dis_cen">
+               <div class="emp_det border_inv">
+                   <div class="emp_hd">
+
+                      <div class="del_lef dis_cen">
+                         <hr>
+                         <span>Detail Employee</span>
+                      </div>
+
+                      <div class="del_rig dis_cen">
+                        <div>
+                           <select >
+                            <option hidden >This year</option>
+                            <option value="">a</option>
+                            <option value="">b</option>
+                           </select>
+                        </div>
+                        <div class="download dis_cen">
+                            <i class="fa-sharp fa-thin fa-download"></i>
+    
+                        <span>Download</span>
+                        </div >
+                      </div>
+
+                   </div>
+                   <div class="emp_info">
+                      <div class="img">
+                        <img src="nn copy.jpg" alt="img">
+                      </div>
+                      <div class="img_info">
+                        <p>Natashia Khaleira</p>
+                        <div class="about">
+                           <div class="role">
+                            <span>Role</span>
+                            <br>
+                            <p>Head of UX Design</p>
+                           </div> 
+                           <div class="role">
+                            <span>Phone Number</span>
+                            <br>
+                            <p>(+91)8888888888</p>
+                           </div> 
+                           <div class="role">
+                            <span>Email Adress</span>
+                            <br>
+                            <p>sssdddddd@gmail.com</p>
+                           </div> 
+                        </div>
+                      </div>
+                   </div>
+                   <div class="emp_punt">
+                     <div class="punc">
+                        <div class="img">
+                            <i class="fa-sharp fa-thin fa-rocket"></i>
+                        </div>
+                        <div class="score">
+                           <p>309</p>
+                           
+                           <span>Total Attendance</span> 
+                        </div>
+                     </div>
+                     <div class="punc">
+                        <div class="img">
+                            <i class="fa-sharp fa-thin fa-rocket"></i>
+                        </div>
+                        <div class="score">
+                           <p>08:46</p>
+                           
+                           <span>Avg Check in Time</span> 
+                        </div>
+                     </div>
+                     <div class="punc">
+                        <div class="img">
+                            <i class="fa-sharp fa-thin fa-rocket"></i>
+                        </div>
+                        <div class="score">
+                           <p>17:04</p>
+                           
+                           <span>Avg Check Out Time</span> 
+                        </div>
+                     </div>
+                     <div class="punc">
+                        <div class="img">
+                            <i class="fa-sharp fa-thin fa-rocket"></i>
+                        </div>
+                        <div class="score">
+                           <p>Role Model</p>
+                           
+                           <span>Employee Predicate</span> 
+                        </div>
+                     </div>
+                   </div>
+               </div>
+               <div class="emp_his">
+
+                  <div class="emp_hd">
+
+                    <div class="del_lef dis_cen">
+                       <hr>
+                       <span>Attendance History</span>
+                    </div>
+
+                    <div class="del_rig dis_cen">
+                      <div class="lft dis_cen">
+                        <span><i style="font-size:15px" class="fa">&#xf009;</i></span>
+                        <span><i style="font-size:15px" class="fa">&#xf039;</i></span>
+                      </div>
+                      <div class="rgt dis_cen">
+                        <span><i style='font-size:18px' class='fas'>&#xf362;</i>Sort</span>
+                        <span><i style='font-size:18px' class='fas'>&#xf0b0;</i> Filter</span>
+                      </div>
+                    </div>
+
+                   </div>
+                
+                   <div class="main_his">
+                       <div class="hinfo">
+                           <div class="head">
+                              <span><i class="material-icons">&#xe192;</i> March 08 2024</span>
+                              <span class="rgt">On Time</span>
+                           </div>
+                           <div class="inhead">
+                            <div>
+                                <span>Check in time</span>
+                                <br>
+                                <span>08:56</span>
+                            </div>
+                            <div>
+                                <span>Checkout Time</span>
+                                <br>
+                                <span>17:10</span>
+                            </div>
+                           </div>
+                       </div>
+                       <div class="hinfo">
+                        <div class="head">
+                           <span><i class="material-icons">&#xe192;</i> March 08 2024</span>
+                           <span class="rgt">On Time</span>
+                        </div>
+                        <div class="inhead">
+                         <div>
+                             <span>Check in time</span>
+                             <br>
+                             <span>08:56</span>
+                         </div>
+                         <div>
+                             <span>Checkout Time</span>
+                             <br>
+                             <span>17:10</span>
+                         </div>
+                        </div>
+                    </div>
+                    <div class="hinfo">
+                        <div class="head">
+                           <span><i class="material-icons">&#xe192;</i> March 08 2024</span>
+                           <span class="rgt">On Time</span>
+                        </div>
+                        <div class="inhead">
+                         <div>
+                             <span>Check in time</span>
+                             <br>
+                             <span>08:56</span>
+                         </div>
+                         <div>
+                             <span>Checkout Time</span>
+                             <br>
+                             <span>17:10</span>
+                         </div>
+                        </div>
+                    </div>
+                    <div class="hinfo">
+                        <div class="head">
+                           <span><i class="material-icons">&#xe192;</i> March 08 2024</span>
+                           <span class="rgt">On Time</span>
+                        </div>
+                        <div class="inhead">
+                         <div>
+                             <span>Check in time</span>
+                             <br>
+                             <span>08:56</span>
+                         </div>
+                         <div>
+                             <span>Checkout Time</span>
+                             <br>
+                             <span>17:10</span>
+                         </div>
+                        </div>
+                    </div>
+                    <div class="hinfo">
+                        <div class="head">
+                           <span><i class="material-icons">&#xe192;</i> March 08 2024</span>
+                           <span class="rgt">On Time</span>
+                        </div>
+                        <div class="inhead">
+                         <div>
+                             <span>Check in time</span>
+                             <br>
+                             <span>08:56</span>
+                         </div>
+                         <div>
+                             <span>Checkout Time</span>
+                             <br>
+                             <span>17:10</span>
+                         </div>
+                        </div>
+                    </div>
+                    <div class="hinfo">
+                        <div class="head">
+                           <span><i class="material-icons">&#xe192;</i> March 08 2024</span>
+                           <span class="rgt">On Time</span>
+                        </div>
+                        <div class="inhead">
+                         <div>
+                             <span>Check in time</span>
+                             <br>
+                             <span>08:56</span>
+                         </div>
+                         <div>
+                             <span>Checkout Time</span>
+                             <br>
+                             <span>17:10</span>
+                         </div>
+                        </div>
+                    </div>
+                    
+                   </div> 
+
+                   <div class="pages">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>...</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </div>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, temporibus itaque 
+       voluptacusamus si natus sint placeat. Voluptatem, sit praesentium iste maxime reprehenderit iusto 
+    </p>                          
+         
+         
+         
+   <script>
+   let ob = {
+     name: "shaile",
+     age: 24
+   }
+ ob.class ="first"
+ delete ob.name;
+   for(let elm in ob){ 
+    console.log(ob[elm]);
+   }
+
+    let arr = [1,2,3,4,5,6,7,8,9];
+
+      let b = arr.map((elm,i)=>{ arr[i]=3*elm;
+            return 2*elm});
+      console.log(arr,b);
+
+      arr.forEach((elm,i)=>{
+        arr[i] = 2*elm;
+      })
+    console.log(arr);
+    $(document).ready(()=>{
+        window.onscroll=()=>{
+            if(window.pageYOffset>250){
+                $("p").css("color","red");
+            }
+            if(window.pageYOffset<=250){
+                $("p").css("color","inherit");   
+            }
+        }
+    })
+   </script>
+</body>
+</html>

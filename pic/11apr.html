@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #name{ display: flex;align-items: center;justify-content: center;
+            width: 100%;height: 15vh;background-color: rgb(194, 175, 175);color: darkorange;
+            font-size: 57px;font-weight: bold;padding: 7px;box-sizing: border-box;
+            margin:30px auto;border: 3px solid grey;
+        }
+        .show{
+            width: 100%;height: 100%;background: #cccccc81;
+            padding-top: 120px;display: none;position: fixed;
+        }
+        .div{
+            width: 70%;height: 30%;border: 3px solid grey;margin: auto;
+            display: block;background: #fff;
+        }
+        .close{
+            font-size: 40px;font-weight: 1000;cursor: pointer;
+        }
+        .close:hover,.close:focus{
+            color: rgb(218, 16, 16);font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="show" id="show">
+        <div class="div" id="div"><span id="close" class="close">&times;</span></div>
+    </div>
+    
+    <button id="but">show</button>
+
+       <form action="" onsubmit="pvntd(event)">
+        <input name="name" type="text" onchange="poo(event)" placeholder="enter name" minlength="7">
+        <input type="submit">
+       </form>
+
+       <p id="name"></p>
+
+
+    <script>
+       function koo(){
+        console.log("ya it's working");
+       }
+
+      koo();
+
+        function pvntd(event){
+             event.preventDefault();
+        }
+        function poo(event){  event.preventDefault();
+            console.log(event.target.value)
+            localStorage.setItem("name",`${event.target.value}`);
+            document.getElementById('name').innerText=localStorage.name;
+        }
+        document.getElementById('name').innerText=localStorage.name;
+        let b=9,c=88;
+        const a=b==c?66:77;
+        console.log(a);
+        let cbut=document.getElementById('close');
+      let elm=document.getElementById('div');
+      let main=document.getElementById('show')
+      let button=document.getElementById("but");
+
+      button.addEventListener("click",(event)=>{ 
+        main.style.display="block";
+      })
+      window.onclick=(event)=>{
+        if(event.target==main){
+            main.style.display="none";
+        }
+      }
+      cbut.onclick=(event)=>{
+        main.style.display="none";
+      }
+    //   window.onclick((event)=>{
+    //      if(event.target==main){
+    //         main.style.display="none";
+    //      }
+    //   })
+    // window.addEventListener("click",(event)=>{
+    //    if(event.target==main){
+    //      main.style.display="none";
+    //    }
+    // })
+    </script>
+</body>
+</html>

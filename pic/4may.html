@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            border: 3px solid grey;width: 75%;height: 75vh;margin: 7px auto;
+            display: flex;
+        }
+        .inner{
+            width: 90px;height: 120px;border: 3px solid grey;margin: 3px;
+        }
+        .no{
+            flex-shrink: 0;flex-basis: 210px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="inner"></div>
+        <div class="inner no"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis aut placeat perferendis?</p>
+
+
+    <script type="module">
+        let promise=new Promise((resolve,reject)=>{
+            console.log("hey promise");
+            setTimeout(()=>{
+                reject(new Error("promise rejected"));
+            },3000)
+           
+        });
+        function error(e){
+            console.log(e);
+        }
+        function full(r){
+            console.log(r)
+        }
+        promise.then(full,error);
+
+
+
+        // console.log("general activity");
+        // console.log(await promise);
+    </script>
+</body>
+</html>

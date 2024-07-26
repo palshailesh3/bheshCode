@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        /* :root{
+            --bg_color: color #72f331;
+        } */
+        .demo{
+            width: 350px;height: 250px;border: 3px solid grey;
+           background-color: var(--bg_color);
+        }
+        .main{
+            --bg_color:red; display: flex;width: 100%;justify-content: space-between;
+        }
+        .modal{
+            width: 100%;height: 90vh;border: 1px solid grey;background-color: transparent;opacity: 1;
+            display: none;position: absolute;
+        }
+        .spec{
+            width: 50%;height: 50vh;border: 1px solid grey;background-color: aliceblue;opacity: 1;
+            position: absolute;top: 50%;margin: -25vh auto 0 auto ;}
+        .bg-primary {
+    background-color: #3f08e6 !important;opacity: .8;
+}
+
+    </style>
+</head>
+<body>
+ <!-- <div class="main">
+       
+<P class="demo"></P>
+<P class="demo"></P>
+<P class="demo"></P>
+ </div> -->
+
+<button>click</button>
+ <div class="modal bg-primary">
+    <div class="spec"></div>
+ </div>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta vel sit nobis voluptatem magni optio
+     voluptas veritatis explicabo reprehenderit, odit ratione unde recusandae fugit ducimus nisi suscipit et 
+     ullam placeat! Quidem totam nulla, facere aspernatur cumque nam voluptatibus quo quaerat, dolorem a delec
+     tus molestias mollitia asperiores ullam earum ab. Quas a quod eius? Impedit iusto sint laboriosam exercit
+     ationem doloremque repudiandae, praesentium veritatis quidem fuga autem atque est excepturi rerum inventor
+     e numquam velit amet ipsa voluptates! Eum voluptatem et incidunt at quos doloribus repudiandae eaque? Rerum asperiores nulla ducimus cumque beatae laboriosam. Temporibus nobis facere nostrum itaque modi maxime qui consequatur dignissimos, perspiciatis quasi. Dolorem eius possimus magnam? Recusandae asperiores pariatur aperiam dolorem non, sit labore autem dolores explicabo exercitationem soluta modi delectus. Consectetur obcaecati inventore facilis corrupti sit exercitationem alias deleniti numquam dicta voluptas voluptatem aut similique aperiam optio, quisquam a. Nesciunt quisquam placeat necessitatibus quas recusandae, soluta voluptatibus voluptates doloremque? Cupiditate necessitatibus fuga provident quidem? Animi eius ratione saepe culpa iure maiores cumque provident, voluptatem harum ullam ducimus, nihil eligendi temporibus perferendis consequatur facilis totam quo itaque ea quae debitis! Deserunt nobis eligendi quibusdam tempore architecto! Incidunt, commodi perspiciatis facilis rerum voluptas recusandae aspernatur voluptates similique deleniti sint cupiditate dicta eius eum laboriosam architecto molestias et! Repellendus nostrum, saepe quaerat tempora et aspernatur ad, maxime voluptatem voluptatibus adipisci illum. Deleniti, perspiciatis blanditiis incidunt maxime nam nihil a illo sunt iure unde quod autem porro repudiandae rerum sapiente officiis culpa explicabo rem adipisci voluptate ullam eligendi deserunt amet minus! Minus laudantium similique eius animi fuga excepturi ducimus numquam eos ipsam veniam. Ad tenetur assumenda adipisci magni deleniti, consectetur ullam in fuga odit vel laborum quisquam dolorum nam illum doloremque quos perferendis veritatis. Cumque magnam amet laboriosam officia dolorem. Voluptatibus autem labore iure dolorem reiciendis quia ab, maxime nesciunt, dignissimos sit eligendi iste itaque sed odio asperiores fugit! Voluptatum nihil asperiores hic mollitia corrupti laudantium fugiat deleniti, odio error et sint quas doloribus nisi illum id maiores nulla,
+     vitae nobis. Optio itaque earum voluptate iusto, cum hic! Blanditiis ratione corporis vero deleniti error.</p>
+
+
+
+
+
+ <script>
+    $(document).ready(()=>{
+
+        $("button").click(()=>{
+            $(".modal").css("display","block");
+        })
+    })
+ </script>
+
+
+
+    <script>
+        function check(name,age){
+            
+            let id=12334;
+            return((...llll)=>{
+                 console.log(name,age,id,llll);
+            })
+        }
+
+        let data=check("shail",24);
+        data(12345678,2,3,4);
+    </script>
+</body>
+</html>

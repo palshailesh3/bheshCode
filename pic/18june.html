@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        .main{
+            width: 450px;height: 450px;border: 1px solid grey;display: flex;
+            flex-wrap: wrap; align-content: flex-start;
+        }
+        .inner{
+            width: 120px;height: 120px;background-color: blueviolet;align-self: flex-start;
+            margin: 12px;
+           
+        }
+        
+        .mains{
+            width: 540px;height: 540px;border: 1px solid grey;display:flex;
+            align-items: center;
+        }
+        .inn{
+            background-color: blueviolet;
+            margin: 12px;height: 90px;flex-grow: 1;
+           
+        }
+        .mmm{
+            flex-basis: 90px;flex-grow: 0;
+        }
+        #id{
+            width: 220px;height: 220px;background-color: blueviolet;
+        }
+        .id{
+            width: 120px;height: 120px;background-color: blue;
+        }
+    </style>
+</head>
+<body>
+ <a href="chsbox.html">go to checkbox</a>
+ <a href="20june.html">go to 20june</a>
+    <div class="mains">
+        
+        <div class="inn mmm"></div>
+       
+        <div class="inn"></div>
+    </div>
+     
+    <!-- <div class="id" id="id"></div>
+
+    <div class="main">
+
+    </div>
+    <button>click</button> -->
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        const data=fruits.sort();
+        console.log(data);
+        console.log(fruits);
+    </script>
+    <script>
+        $(document).ready(()=>{
+            const box=$(".main");
+            $("button").click(()=>{
+                let elm = document.createElement("div");
+                elm.classList.add("inner");
+                box.append(elm);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .notification_div{
+            width: 60%;height:0px;overflow: hidden;box-sizing: border-box;border-radius: 5px;
+        transition: height 2s,background-color 4s;position: fixed;
+        left:calc(20%);top: 34px;background-color: #FBA504;
+        }
+        .change{
+            height: 50px;background-color: brown;
+            padding: 3px;
+        }
+        .para{
+            width: 250px;height: 242px;background-color: aliceblue;
+        }
+        .param{
+            width: 230px;margin: 12px auto;z-index: 99999;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="param">loren390
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, consectetur nisi voluptate voluptates explicabo maxime natus cupiditate ab ipsum dolorum nesciunt itaque blanditiis vitae assumenda, sequi at ut dignissimos veniam recusandae voluptatum unde. Repudiandae tempore at porro? Non accusantium optio excepturi, delectus at repellendus rerum sit pariatur, deleniti officiis, unde cumque vel quo provident numquam accusamus? Minima repudiandae consectetur esse accusantium, delectus ad! Dignissimos alias possimus, assumenda natus officiis ipsa, sapiente cum ex reiciendis odio vitae consequuntur voluptatem numquam quo fuga iste quaerat dolorem aliquid similique modi eaque! Itaque ut magni dicta assumenda iusto dolor adipisci enim. Beatae minima saepe pariatur doloremque sequi vel dicta itaque maiores ea sunt culpa placeat sit consequatur, esse ex laborum, cumque aliquid ratione facere autem dolore ducimus iste qui? Error vitae officiis facilis illo, fuga libero fugit, voluptatem debitis labore amet nobis inventore provident aliquam delectus omnis dolore asperiores beatae consequatur quasi natus ea aut laboriosam, maxime eaque! Harum laudantium perspiciatis exercitationem eum commodi odit, dolore illum aut libero sapiente excepturi neque vitae architecto unde? Incidunt, facilis non! Atque accusamus assumenda neque officiis saepe suscipit ea velit, expedita aliquam quis accusantium, hic explicabo minus corrupti nihil unde repellendus, excepturi laborum impedit. Amet ab deleniti eos saepe error molestiae modi quia doloremque facere! Delectus, fugiat? Pariatur sed rerum error ipsa commodi praesentium dolores eveniet rem aut impedit voluptates soluta numquam eius culpa, tempore voluptatibus perspiciatis dolore deleniti sequi labore architecto, ipsam nemo! Temporibus suscipit dolor autem unde fugit rerum ex totam pariatur animi error molestiae natus eligendi assumenda enim impedit, tempora recusandae iure dicta, non doloremque dolorem est. Facilis quisquam velit, at, quas cum magnam odio dolorum neque quae enim animi voluptatibus? Quia, doloribus ab debitis labore asperiores harum saepe beatae omnis est suscipit incidunt dolorum similique delectus. Deserunt ab, eos obcaecati labore earum ex molestias cumque ea doloribus alias aperiam asperiores dicta et minus porro, commodi vitae consequatur fugiat laboriosam explicabo, velit quod dolorem? Voluptas ipsam placeat, autem ipsum voluptate quos doloribus, natus aspernatur rerum atque ad dolor? Ullam dolores excepturi totam accusantium porro eos sunt sapiente, nihil laborum magnam quae libero illo rerum doloribus eveniet similique iusto quasi minus nulla, dolore nisi veniam laudantium? Ut deleniti debitis sed commodi dolor distinctio nihil, eveniet odio ab possimus quis officia veritatis odit magni voluptatibus maxime consectetur beatae perferendis voluptate maiores dolorum vitae dignissimos. Eius, ut!
+    </div>
+    <!-- <button class="button">click</button> -->
+    <div class="notification_div" id="notification_div">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ut laborum tempora!</div>
+
+
+    <button id="paragraph">paragraph</button>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem maiores natus.</p>
+
+
+
+
+
+    <script type="module">
+
+        import submit from './js/change.js'
+       
+
+    //   let elm=document.getElementById('para');
+    
+
+    //   document.getElementById('paragraph').addEventListener("click",()=>{
+    //           submit(elm);  
+    //   })
+
+
+        $(document).ready(()=>{
+             
+            setTimeout(()=>{
+                $("#notification_div").addClass("change");
+            } ,2000)
+            setTimeout(()=>{
+                $("#notification_div").removeClass("change");
+            } ,4000)
+
+            $(".button").click(()=>{
+              
+               $("#notification_div").toggleClass("change");
+
+               setTimeout(()=>{
+                $(".notification_div").removeClass("change");
+               },2000)
+                
+            // let elm= document.querySelector("notification");
+            // console.log(elm.innerHTML)
+             })
+        })
+    </script>
+</body>
+</html>

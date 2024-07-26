@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <input type="text" oninput="show(event)">
+
+    <script>
+
+       let arr = ["shailvi","shailesh","abhay","abhimanyu","surendra"]
+
+       function show(e){
+           arr.map(elm=>{ let aa = elm.includes(e.target.value);
+            if(aa){
+                console.log(elm)
+            }
+           })
+       }
+
+    //    let a= (function(){
+    //         return 99;
+    //     })();
+    //     console.log(a);
+    </script>
+</body>
+</html>

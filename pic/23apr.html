@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr{
+            height: 5px;background: grey;width: 333px;margin: 0;
+        }
+        .after{
+            height: 5px;
+        }
+        #fname{
+            display: none;color: red;
+        }
+        .spce{ 
+            position: relative;
+            height: 12px;
+        }
+        .fname{
+            margin: 7px 0px;
+        }
+        .name:invalid:required{
+            border: 3px solid red;
+        }
+        a{
+            font-size: 39px;font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="main">
+        yes im here
+        <span>what are you doing here</span>
+    </div>
+    <div class="after"></div>
+    <hr>
+
+
+    <p id="demo">
+        <span id="spn">gggggggggg</span>
+        <span id="spm">jjjjjjjjjj</span>
+    </p>
+
+   <form id="myform" action="25apr.html" onsubmit="validate(event)">
+    <select name="option" id="option">
+        <option value="" hidden>language</option>
+        <option value="JTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="javascript">javascript</option>
+    </select>
+   <div class="fname">
+    <input type="text" name="fname" class="name" required>
+   
+   </div>
+   <div class="spce"> <span id="fname">* this field is required</span></div>
+   <input type="email" name="email">
+    <input type="submit">
+   </form>
+
+
+   <a href="25apr.html?greeting=hello">link</a>
+
+    <script>
+        
+
+  function validate(){ 
+    //event.preventDefault();
+    let spn=document.getElementById('fname');
+    let ipt=document.forms["myform"]["fname"];
+    let elm=document.forms["myform"]["fname"].value;
+    if(elm==""){
+        // alert("enter name please................!")
+        ipt.focus();
+        spn.style.display="block";
+        return false;
+    }
+    data=elm
+    localStorage.setItem("fname",elm);
+    spn.style.display="none";
+    console.log(document.getElementById('myform').elements);
+  }
+
+    
+    </script>
+</body>
+</html>

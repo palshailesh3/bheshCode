@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 75%;height: 21vh;border: 3px solid grey;
+           box-sizing: border-box;
+            padding: 9vh 12px;text-align: center;
+        }
+        p:hover{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <form id="myform" onsubmit="count(event)">
+    <input type="number" name="no" id="num">
+    <input type="submit" value="button" >
+    </form>
+    <p id="para">yeh this is paragraph</p>
+    <p id="main"></p>
+    <p id="no"></p>
+
+
+    <script type="module">
+        async function poo(){ 
+            console.log(99);
+            return(99);
+        }
+      let data= await poo();
+      console.log(data);
+       let e2=document.getElementById('no');
+       
+       let sum=0;
+       
+       async function count(e){e.preventDefault();
+            let no=document.forms["myform"].no.value;
+            let value=new Promise((resolve,reject)=>{
+                for(let i=1;i<=no;i++){
+                sum+=i;
+             }
+             console.log("it is a promise")
+             //resolve(sum);
+             resolve(sum)
+            })
+            
+          // value.then(value=>console.log(value));
+            
+           // e2.innerHTML= await value;
+        }
+        let elm=document.getElementById('para');
+        let elm1=document.getElementById('main');
+        elm.onclick=(e)=>{
+            elm1.innerHTML=e.target.innerHTML;
+        }
+    </script>
+</body>
+</html>
