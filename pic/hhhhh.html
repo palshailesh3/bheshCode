@@ -9,19 +9,17 @@
    </style>
 </head>
 <body>
-<ul type="a">
+<ul id="ul">
     <li>ab</li>
-    <li>bd</li>
+    <li>bdh</li>
     <li>js</li>
-    <li>ka</li>
+    
 </ul>
+
 <ol type="i">
     <li>kkkk</li>
     <li>llll</li>
-    <li>mmmm</li>
-    <li>nnnn</li>
-    <li>oooo</li>
-    <li>pppp</li>
+    
 </ol>
 <!--       
     <p id="main" class=" hr clr">Lorem ipsum dolor sit amet.</p>
@@ -49,8 +47,41 @@
 
 <button onclick="sortme()">sort</button>
 
+<button onclick="addelm()">addelm</button>
+
+<button onclick="update()">update</button>
 
 
+
+
+
+
+
+<script>
+    let elm = document.getElementsByTagName("li");
+    let beta = document.querySelectorAll("li");
+
+    function addelm(){ let node = document.getElementById("ul")
+       let bm = document.createElement("li");
+       bm.innerHTML="newlist"
+       node.append(bm);
+    update();
+    }
+
+    function update(){ 
+     
+     for(let i=0;i<elm.length;i++){
+        console.log(elm[i].innerHTML)
+     }
+     console.log("*************************************************************")
+     for(let i=0;i<beta.length;i++){
+        console.log(beta[i].innerHTML)
+     }
+    }
+     
+    
+</script>
+<!-- 
 <script>
 
     setTimeout(()=>console.log("timeout"));
@@ -62,7 +93,7 @@
         rej("promise2")
     }).catch((data)=>console.log(data));
 
-</script>
+</script> -->
 <!-- 
 <script type="module">
     //setInterval(()=>console.log("llllllllllllllllllllllllll"),3000)
