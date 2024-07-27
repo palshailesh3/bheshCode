@@ -5,10 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
    <style>
+    p.para{
+        width: 350px;
+        color: orange;
+    }
    
+    p:hover{
+        color: green;
+    }
+    p::first-line{
+        color: red;
+    }
+    p.para::before{
+        content: '';
+        display:block;
+        width: 250px;
+        height: 250px;
+        background-color: blueviolet;
+    }
    </style>
 </head>
 <body>
+    <p class="para">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt accusantium quos magni qui corporis 
+        ipsa provident perferendis architecto magnam, ducimus molestiae?
+    </p>
 <ul id="ul">
     <li>ab</li>
     <li>bdh</li>
@@ -27,7 +48,7 @@
 
    <button onclick="call(99)">fun call</button><br>
    <a href="https://newsapi.org/" onclick="return handleclick()">news gallery</a> -->
-
+<!-- 
    <button onclick="fun()">start timer</button>
    <button onclick="fun2()">timer</button>
 
@@ -43,7 +64,7 @@
 
 <button onclick="handlesort(event)">price</button>
 <button onclick="handlesort(event)">name</button>
-<p id="demo"></p>
+<p id="demo"></p> 
 
 <button onclick="sortme()">sort</button>
 
@@ -51,12 +72,85 @@
 
 <button onclick="update()">update</button>
 
+<button onclick="stch()">switch</button>
+<p id="para"></p>
+
+-->
 
 
+<script>
+    let a=99;
+    console.log(typeof(typeof(a)));
+    let b=++a;
+    console.log(b,a);
+    //let c=a++;
+    //console.log(a++,++a);
+    let N = 5 
+    let A = [3,1,3,3,2] 
+    function majorityElement(a, size)
+    {
+        //your code here
+        a.sort((a,b)=>a-b);
+        //console.log(a);
+        let count=1,ans=[];
+        
+        for(let i=1;i<size;i++){
+            if(a[i]==a[i-1]){
+                count++;
+                if(i==size-1&&count>size/2){
+                    ans.push(a[i])
+                }
+            }else if(count>size/2){
+                ans.push(a[i-1]);
+                count=1;
+            } 
+        }
+        console.log(ans);
+    }
+    majorityElement(A,N);
+</script>
+<!--  
+<script>
+    let arr = [12,3,4,567,98,45,45,67,48,96,2];
+    let n=arr.length;
+    console.log(n);
 
+    function leader(){
+        let max=-Infinity;
+        let arr = [12,3,4,567,98,45,45,67,48,96,2];
+        let n=arr.length;
+        
+        let ans=[];
+        for(let i=n-1;i>=0;i--){
+            if(arr[i]>=max){ max=arr[i];
+                ans.push(arr[i]);
+            }
+        }
+        console.log(ans);
+    }
 
+    leader();
 
+    
+</script>  -->
 
+<!-- 
+<script>
+    let data = 22;
+function stch(){
+
+    switch(data){
+        case 22:console.log("hey");
+                document.getElementById('para').innerHTML = "Today is Saturday";
+                 break;
+        case 99:console.log("data");
+                 break;
+        default:console.log("proper");                  
+    }
+}
+</script> -->
+
+<!-- 
 <script>
     let elm = document.getElementsByTagName("li");
     let beta = document.querySelectorAll("li");
@@ -80,7 +174,7 @@
     }
      
     
-</script>
+</script> -->
 <!-- 
 <script>
 
