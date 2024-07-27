@@ -6,6 +6,13 @@
     <title>Document</title>
 
    <style>
+
+    .pclass{
+        width: 350px;height: 50px;display: flex;
+        align-items: center;justify-content: center;margin: 5px;
+        background-color: rgb(245, 185, 108);list-style: none;
+    }
+
     p.para{
         width: 350px;
         color: orange;
@@ -77,7 +84,35 @@
 -->
 
 
+
+
+
 <script>
+
+    let str="shailesh";
+    let str1=str.slice(0,6);
+     let str2 = str.slice(6,8);
+    console.log(str1);
+    console.log(str2);
+    
+</script>
+<!-- 
+<script>
+    let arr = ["apple","banana","grapes","mango","orange"];
+    let ul=document.createElement("ul");
+    for(let i=0;i<5;i++){
+        let elm=document.createElement("li");
+        elm.classList.add("pclass");
+        elm.innerHTML=arr[i];
+        ul.append(elm);
+    }
+    document.body.append(ul);
+</script>  -->
+<!-- 
+<script>
+
+    console.log(3>2>1);
+    console.log(1<2<3);
     // let date = new Date();
     // let time =date.getMonth();
     // console.log(time);
@@ -124,7 +159,7 @@
 }
  
 
-</script>
+</script> -->
 <!--  
 <script>
     let arr = [12,3,4,567,98,45,45,67,48,96,2];
