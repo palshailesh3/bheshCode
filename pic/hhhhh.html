@@ -88,13 +88,34 @@
 
 
 <script>
-
-    let str="shailesh";
-    let str1=str.slice(0,6);
-     let str2 = str.slice(6,8);
-    console.log(str1);
-    console.log(str2);
-    
+    try{
+       console.log(name);
+       let name="sha"
+       console.log("my name");
+    }catch(err){
+      console.log(err.name,err.message)
+    }
+    //let str="dmtjtvqyiedezraoqkfu";
+    let str="shailesh"
+   function countMin(str){
+        //code here
+        let str1='',str2='';
+        let count=0;
+        let n=str.length;
+        console.log(n)
+        for(let i=0;i<str.length;i++){
+            if(str[i]!=str[n-1-i]){
+                count++;
+                str1=str.slice(0,n-i);
+                str2=str.slice(n-i,n);
+                str=str1+str[i]+str2;
+                n++;
+            }
+        }
+        console.log(str);
+       console.log(count);
+    }    
+    //countMin(str);
 </script>
 <!-- 
 <script>
