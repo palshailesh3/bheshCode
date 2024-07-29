@@ -31,9 +31,26 @@
         height: 250px;
         background-color: blueviolet;
     }
+    /* img{
+        max-width: 100%;
+        width: 550px;
+        max-height: 50%;
+        object-fit: cover;
+        object-position: top;
+    } */
+    .img{
+        width: 75%;height:450px;border: 3px solid grey;display: flex;
+        align-items: center;justify-content: center;  box-sizing: border-box;  }
+        .img img{
+           width: 100%; max-width: 100%;max-height: 100%; object-position: top;object-fit: cover;
+        }
    </style>
 </head>
 <body>
+    <div class="img">
+        <img src="mm.jpg" alt="fffff">
+    </div>
+  
     <p class="para">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt accusantium quos magni qui corporis 
         ipsa provident perferendis architecto magnam, ducimus molestiae?
@@ -85,15 +102,31 @@
 
 
 
-
-
+ <script>
+    let id = Date.now();
+    console.log(id);
+    // let obj = {
+    //     name:"shailesh",
+    //     age:24
+    // }
+    
+    // function foo(obj){
+    //     obj.name="maya";
+    //     console.log(obj);
+    // }
+    // foo(obj);
+    // console.log(obj);
+ </script>
+<!-- 
 <script>
     try{
-       console.log(name);
+       //console.log(name);
        let name="sha"
        console.log("my name");
-    }catch(err){
-      console.log(err.name,err.message)
+       throw new Error("error");
+    }
+    catch(err){
+      console.log(err,err.name,err.message)
     }
     //let str="dmtjtvqyiedezraoqkfu";
     let str="shailesh"
@@ -116,7 +149,7 @@
        console.log(count);
     }    
     //countMin(str);
-</script>
+</script> -->
 <!-- 
 <script>
     let arr = ["apple","banana","grapes","mango","orange"];
