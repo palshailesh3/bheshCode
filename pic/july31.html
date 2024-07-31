@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bor{
+            border: 3px solid ;
+           border-collapse: collapse;
+           
+        }
+        .div{
+            width: 250px;height: 250px;border: 3px solid grey;text-align: center;
+        }
+        .div div{
+            width: 50px;height: 50px;border: 1px solid grey;vertical-align:middle;
+        }
+        table,th,td{
+            border: 1px solid grey;
+           border-collapse: collapse;
+        }
+        td,th{background-color: aqua;border-color: aliceblue;}
+    </style>
+</head>
+<body>
+<div class="div">ssssss
+<div>abcd</div>
+</div>
+    <table>
+      <tr >
+        <th >A</th>
+        <th>B</th>
+        <th>C</th>
+        <th>D</th>
+      </tr>
+        <tr>
+            <td class="bor">1</td>
+            <td rowspan="2">2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            
+            <td>7</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td colspan="2">9</td>
+            <td>10</td>
+            <td>11</td>
+            
+        </tr>
+    </table>
+
+</body>
+</html>
