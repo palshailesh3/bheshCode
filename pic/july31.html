@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <!-- <style>
         .bor{
             border: 3px solid ;
            border-collapse: collapse;
@@ -21,13 +21,42 @@
            border-collapse: collapse;
         }
         td,th{background-color: aqua;border-color: aliceblue;}
+        park{ display: block;
+            background-color: blueviolet;
+        }
+    </style> -->
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .check{
+            width:528px;height: fit-content;border: 3px solid grey;display: flex;flex-wrap: wrap;align-items: center;
+            justify-content: center;
+        }
+        .boxes{
+            width: 66px;height: 66px;
+        }
+        .check div:nth-child(even){
+            background-color: blue;
+        }
+        #div{width: 250px;height: 250px;display: flex;align-items: center;
+            justify-content: center;border: 1px solid grey;margin: 24px;
+        }
     </style>
 </head>
 <body>
+<!--     
 <div class="div">ssssss
 <div>abcd</div>
 </div>
-    <table>
+
+<park>
+    learn park
+</park> -->
+
+    <!-- <table>
       <tr >
         <th >A</th>
         <th>B</th>
@@ -52,13 +81,55 @@
             <td>11</td>
             
         </tr>
-    </table>
+    </table> -->
+
+   <div class="check" id="checkbox">
+
+   </div>
+  <div id="div">
+
+  </div>
 
 
-       <script>
-           let num = Number("1")&&99 ;
+
+
+
+
+<script>
+      let elm = [1,2,3,4,5];
+      let b=elm.map((elm)=>{elm*2})
+      console.log(b);
+</script>
+
+<!-- 
+        <script>
+            let tag=document.getElementById('div');
+            tag.appendChild("hey i am the best");
+        </script> -->
+<!-- 
+        <script>
+            let box = document.getElementById('checkbox');
+
+            function checkbox(){
+
+                for(let i=0;i<8;i++){
+                    for(let j=0;j<8;j++){
+                        let elm = document.createElement("div");
+                        elm.classList.add("boxes");
+                        box.append(elm)
+                    }
+                    let br=document.createElement("br");
+                    box.append(br);
+                }
+            }
+            checkbox();
+
+        </script>
+  -->
+       <!-- <script>
+           let num = Number("0")||99 ;
            console.log(num);
-       </script>
+       </script> -->
      <!-- <script type="module">
         let prom1 = new Promise((res,rej)=>{
             

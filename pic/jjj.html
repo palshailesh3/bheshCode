@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+
+
+
+
+
+
+<script>
+    let arr = [2,3,32,34,32,2];
+
+    let ans=[];
+    let aarr=[];
+    for(let i=0;i<arr.length;i++){
+        if(ans[arr[i]]==undefined){
+            ans[arr[i]]=arr[i];
+            aarr.push(arr[i]);
+        }    
+    }  
+    console.log(aarr);
+   
+</script>
+
+<!-- 
+    <script>
+        let str = "Hello World";
+        let ans ="";
+   let len = str.length;
+        for(let i=len-1;i>=0;i--){
+            ans+=str[i];
+        }
+        console.log(ans);
+    </script> 
+    -->
+<!-- 
+    <script>
+       let arr = [12,34,32,3,2];
+           let elm;
+   let swp,pointer;
+        for(let j=0;j<2;j++){   
+            elm=arr[j];
+        for(let i=j;i<arr.length;i++){
+             if(arr[i]>elm){
+                elm=arr[i];
+                pointer=i;
+             }
+        }
+        swp=arr[pointer];
+        arr[pointer]=arr[j];
+        arr[j]=swp;
+
+    }
+    console.log(arr[1]);
+    </script> 
+    -->
+<!--
+     <script>
+        let a=123;
+        let d1=a%10;
+        a=Math.floor(a/10);
+        let d2=a%10;
+        a=Math.floor(a/10);
+        let d3=a%10;
+        a=Math.floor(a/10);
+        //console.log(d1,d2,d3);
+ let ans =d1*100+d2*10+d3*1;
+ console.log(ans);
+    </script> 
+    -->
+</body>
+</html>
