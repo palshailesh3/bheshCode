@@ -6,16 +6,57 @@
     <title>Document</title>
 </head>
 <body>
+  
     
 
 
+
+
+
+<script>
+    const m=undefined;
+    console.log(m);
+        function getVowels(str) {
+           const m = str.match(/[aeiou]/gi);
+           if (m === null) {
+             return 0;
+           }
+           return m.length;
+       }
+
+   console.log(getVowels('ski is a ball pen O'));
+</script>
+<!-- 
+<script>
+    let a = null;
+   // a=a+1;
+    console.log(typeof(a-"1"+1));
+    console.log(a-"1"+1);
+</script> -->
+<!--   
     <script>
+
+        let name="shailesh";
+        function namesort(name,n){ 
+            let ans="";
+            let dot ="...";
+             for(let i=0;i<n;i++){
+                 ans+=name[i];
+             }
+             ans=ans+dot;
+ 
+              console.log(ans);
+        }
+        namesort(name,5);
+    </script> -->
+    <!-- <script>
         let sum=null;
+        console.log(sum);
         sum=sum+2;
         console.log(sum);
         sum=sum-2;
-        console.lof(sum);
-        
+        console.log(sum);
+
         //  for(let i=0;i<14;i++){
         //     sum+=i;
         //  }
@@ -27,6 +68,6 @@
         // else{
         //     console.log("hhhhhhhhhhhhhh")
         // }
-    </script>
+    </script> -->
 </body>
 </html>
