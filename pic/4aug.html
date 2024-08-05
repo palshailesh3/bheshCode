@@ -4,15 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #main{
+            width: 350px;height: 360px;border: 3px solid grey;
+            display:flex;align-items: center;justify-content: center;
+            margin: 150px ;
+        }
+        #class{
+            width: 250px;height: 260px;border: 3px solid grey;
+            display: flex;align-items: center;justify-content: center;
+        }
+    </style>
 </head>
 <body>
   
-    
+    <div id="main" >
+        <div id="class">
+            <button id="butt">click</button>
+        </div>
+    </div>
 
 
 
 
 
+<script>
+    document.getElementById("main").addEventListener("click",(e)=>{
+                                                            console.log("outer most div clicked")},true);
+    document.getElementById("class").addEventListener("click",(e)=>{ 
+                                                            console.log("innr div clicked")},true);
+    document.getElementById("butt").addEventListener("click",(e)=>{ 
+                                                            console.log("button clicked")});
+</script>
+
+<!-- 
 <script>
     const m=undefined;
     console.log(m);
@@ -25,7 +50,7 @@
        }
 
    console.log(getVowels('ski is a ball pen O'));
-</script>
+</script> -->
 <!-- 
 <script>
     let a = null;

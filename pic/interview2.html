@@ -9,12 +9,67 @@
 
 
 
+   <script>
+    let nub=12345678;
+    console.log(nub);
+    function sum(num){
+        let sum=0;
+        while(num>0){
+            sum=sum+num%10;
+            num=Math.floor(num/10);
+        }
+      console.log(sum);
+    }
+    sum(nub);
+   </script>
 
+<!--    
+    <script>
+        let num = 123456;
+        function add(num){
+             let ans = "";
+            let dta = num.toString();
+            // let len=Math.floor(dta.length/2)
+             for(let i=dta.length-1;i>=0;i--){
+                 ans+=dta[i];
+             }
+             console.log(Number(ans))
+        }
+        add(num);
+    </script> -->
+
+<!-- 
+    <script>
+       async function fun(){
+          
+        let prom = new Promise((res,rej)=>{ 
+            
+            console.log("entered in promise");
+
+            setTimeout(()=>{
+                console.log("promise 1  resolved");
+                res(new Promise((res,rej)=>{
+                    console.log("promise 2 resolved");
+                    res("promise resolved");
+                }));
+            })
+
+            console.log("ahead settimeout");
+           })
+
+           let data = await prom;
+           console.log(data);
+           console.log("function execution end");
+        }
+        fun();
+    </script> -->
+
+<!-- 
 <script>
     let arr =[88,33,48,83,56,36];
     arr.sort((a,b)=>a-b);
     console.log(arr);
-</script>
+</script> -->
 
 <!-- 
 <script>
