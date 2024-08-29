@@ -26,41 +26,61 @@
 
 
 
+<!-- <script>
+    function foo(){
+        console.log("start execution");
+        setTimeout(()=>{
+            console.log("web api executed");
+        },9000);
+        console.log("function execution end");
+    }
+    foo();
+    console.log("out of function scope");
+</script> -->
 
+    
+<!-- <script>
+    let arr=[1,2,3]
+    console.log(arr[-1]+1);
+    //console.log(undefined+1+3+6);
+    console.log(null+1);
+</script> -->
 
-<script>
+<!-- <script>
     document.getElementById("main").addEventListener("click",(e)=>{
                                                             console.log("outer most div clicked")},true);
     document.getElementById("class").addEventListener("click",(e)=>{ 
-                                                            console.log("innr div clicked")},true);
+                                                            console.log("innr div clicked")
+                                                           e.stopPropagation();
+                                                        });
     document.getElementById("butt").addEventListener("click",(e)=>{ 
-                                                            console.log("button clicked")});
-</script>
+                                                            console.log("button clicked")
+                                                            e.stopPropagation();
+                                                            });
+</script> -->
 
-<!-- 
-<script>
+
+<!-- <script>
     const m=undefined;
-    console.log(m);
+    console.log(typeof(m));
         function getVowels(str) {
            const m = str.match(/[aeiou]/gi);
            if (m === null) {
              return 0;
            }
-           return m.length;
+           return m;
        }
-
    console.log(getVowels('ski is a ball pen O'));
 </script> -->
-<!-- 
-<script>
+
+<!-- <script>
     let a = null;
-   // a=a+1;
+   // a=a+2;
     console.log(typeof(a-"1"+1));
     console.log(a-"1"+1);
 </script> -->
-<!--   
-    <script>
-
+  
+    <!-- <script>
         let name="shailesh";
         function namesort(name,n){ 
             let ans="";
@@ -74,13 +94,14 @@
         }
         namesort(name,5);
     </script> -->
-    <!-- <script>
-        let sum=null;
-        console.log(sum);
-        sum=sum+2;
-        console.log(sum);
-        sum=sum-2;
-        console.log(sum);
+
+    <!--<script>
+        //let sum=null;
+        //console.log(sum);
+        //sum=sum+2;
+        // console.log(sum);
+        // sum=sum-2;
+        // console.log(sum);
 
         //  for(let i=0;i<14;i++){
         //     sum+=i;
@@ -93,6 +114,7 @@
         // else{
         //     console.log("hhhhhhhhhhhhhh")
         // }
-    </script> -->
+    </script>-->
+
 </body>
 </html>
